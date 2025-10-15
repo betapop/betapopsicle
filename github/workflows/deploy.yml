@@ -10,8 +10,8 @@ jobs:
         
       # your build step here
         
-      - name: deploy2nekoweb
-        uses: indiefellas/deploy2nekoweb@main
+      - name: betapopsicle
+        uses: betapop/betapopsicle@main
         with:
           nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
           nekoweb-cookie: ${{ secrets.NEKOWEB_COOKIE }}
