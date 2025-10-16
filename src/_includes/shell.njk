@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>betapopsicle</title>
-    <script src="../main.js"></script>
+    <title>{{ title }}</title>
+    <script src="{{ nesting }}main.js"></script>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="{{ nesting }}favicon.ico" rel="icon" type="image/x-icon" />
   </head>
-  <body class="index-page">
+  <body class="{{ bodyClass }}">
     <header>Header</header>
     <main>
-      
-<h1>About Me</h1>
-<p>Here is the main content of your file...</p>
+      {{ content | safe }}
     </main>
     <footer>Footer</footer>
   </body>
