@@ -31,7 +31,7 @@ p {
   grid-template-areas:
     "intro intro intro nav"
     "fun-scroll fun-scroll fun-scroll nav"
-    "status status ad-space fun"
+    "status status silly-space fun"
     "status status cal fun"
     "neighbors neighbors webrings webrings"
     "free-space free-erspace webrings webrings";
@@ -47,7 +47,7 @@ p {
 
 .status { grid-area: status; }
 
-.ad-space { grid-area: ad-space; }
+.silly-space { grid-area: silly-space; }
 
 .cal { grid-area: cal; }
 
@@ -85,7 +85,7 @@ p {
     "fun-scroll"
     "status"
     "fun"
-    "ad-space"
+    "silly-space"
     "cal"
     "neighbors"
     "webrings"
