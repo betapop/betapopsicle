@@ -5,15 +5,18 @@
     <script src="{{ nesting }}main.js"></script>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="assets/main.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="{{ nesting }}favicon.ico" rel="icon" type="image/x-icon" />
   </head>
   <body class="{{ bodyClass }}">
-    <header>Header</header>
-    <main>
-      {{ content | safe }}
-    </main>
+    <div class="container">
+    <div class="Banner" style="background-color: blue;">hi</div>
+    <div class="main" style="background-color: rgb(252, 156, 255)">
+        {{ content | safe }}
+    <div class="footer" style="background-color: rgb(252, 227, 0)">
     <footer>Footer</footer>
+    </div>
+    </div>
   </body>
 </html>
