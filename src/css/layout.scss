@@ -16,14 +16,22 @@
 .footer { grid-area: footer; }
 
 body {
-  background-color: aquamarine;
+  background-image: url(https://media.discordapp.net/attachments/847519376923689030/1428474672265171126/Untitled459_20251016160804.png?ex=68f2a235&is=68f150b5&hm=f60d6b89623c73eb7f3646a7376fea87ccd25ae2aac8f03cbfa0ea1bc468e9fd&=&format=webp&quality=lossless);
+  animation: animate-bg 0.92s infinite linear;
+}
+
+@keyframes animate-bg {
+    100% {
+        background-position: 50px 50px;
+    }
 }
 
 p {
     font-size: large;
 }
 
-.container2 {  display: grid;
+.container2 {  
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 10px 8px;
@@ -35,8 +43,8 @@ p {
     "status status cal fun"
     "neighbors neighbors webrings webrings"
     "free-space free-erspace webrings webrings";
-    width: 100%; 
-    height: 100vh; 
+    width: 100%;
+    height: 1200px;
 }
 
 .intro { grid-area: intro; }
@@ -91,7 +99,15 @@ p {
     "webrings"
     "free-space"
     "free-erspace";
-    width: 100%; 
-    height: 100vh;
+    width: 100%;
+    height: 1200px;
 }
+}
+
+.winheader {
+    background-color: #1C6EA4;
+    height: fit-content;
+    width: 100%;
+    border-bottom: 5px ridge #2CABFF;
+    font-size: large;
 }
