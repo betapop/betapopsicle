@@ -23,7 +23,7 @@
 }
 
 body {
-  background-image: url(https://media.discordapp.net/attachments/847519376923689030/1428474672265171126/Untitled459_20251016160804.png?ex=68f2a235&is=68f150b5&hm=f60d6b89623c73eb7f3646a7376fea87ccd25ae2aac8f03cbfa0ea1bc468e9fd&=&format=webp&quality=lossless);
+  background-image: url(../public/assets/img/temp/bg_l.png);
   animation: animate-bg 0.92s infinite linear;
 }
 
@@ -140,4 +140,9 @@ p {
   width: 100%;
   border-bottom: 5px solid #b2f0ff;
   font-size: large;
+}
+
+.small-list {
+  border-bottom: rgb(0, 217, 255) dashed 2px;
+  padding: 8px;
 }
