@@ -1,9 +1,9 @@
-async function discordChecker() {
+export async function discordChecker() {
     try {
       const response = await fetch('https://api.lanyard.rest/v1/users/588805007181086726');
       const splingus = await response.json();
       document.getElementById("status-details").innerHTML = `
-      ${splingus.data.discord_user.username} is ${splingus.data.discord_status}
+      ${splingus.data.discord_user.display_name} is ${splingus.data.discord_status}
       `
       const statusColors = {
         online: "#5dff8a",

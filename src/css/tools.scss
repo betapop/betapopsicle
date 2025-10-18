@@ -33,15 +33,23 @@
   height: 10px;
   width: 10px;
   /* margin top to align is prob bad but idk how to css... */
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
 #status-details {
   margin: 0;
   padding-right: 5px;
+  font-size: medium;
 }
 
 .status {
   display: flex;
   flex-direction: row;
+}
+
+lastfm-tracks {
+  box-sizing: border-box;
+  border: 1px solid #000;
+  width: 270px;
+  height: 714px;
 }
