@@ -1,4 +1,5 @@
-.container {  display: grid;
+.container {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
   gap: 10px 0px;
@@ -6,14 +7,20 @@
   grid-template-areas:
     "Banner Banner Banner Banner"
     "main main main main"
-    ". footer footer ."; 
-    margin-left: 24%;
-    margin-right: 24%;
+    ". footer footer .";
+  margin-left: 24%;
+  margin-right: 24%;
 }
 
-.Banner { grid-area: Banner; }
-.main { grid-area: main; }
-.footer { grid-area: footer; }
+.Banner {
+  grid-area: Banner;
+}
+.main {
+  grid-area: main;
+}
+.footer {
+  grid-area: footer;
+}
 
 body {
   background-image: url(https://media.discordapp.net/attachments/847519376923689030/1428474672265171126/Untitled459_20251016160804.png?ex=68f2a235&is=68f150b5&hm=f60d6b89623c73eb7f3646a7376fea87ccd25ae2aac8f03cbfa0ea1bc468e9fd&=&format=webp&quality=lossless);
@@ -21,16 +28,16 @@ body {
 }
 
 @keyframes animate-bg {
-    100% {
-        background-position: 50px 50px;
-    }
+  100% {
+    background-position: 50px 50px;
+  }
 }
 
 p {
-    font-size: large;
+  font-size: large;
 }
 
-.container2 {  
+.container2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -43,71 +50,94 @@ p {
     "status status cal fun"
     "neighbors neighbors webrings webrings"
     "free-space free-erspace webrings webrings";
-    width: 100%;
-    height: 1200px;
+  width: 100%;
+  height: 1200px;
 }
 
-.intro { grid-area: intro; }
+.intro {
+  grid-area: intro;
+}
 
-.nav { grid-area: nav; }
+.nav {
+  grid-area: nav;
+}
 
-.fun-scroll { grid-area: fun-scroll; }
+.fun-scroll {
+  grid-area: fun-scroll;
+}
 
-.status { grid-area: status; }
+.status {
+  grid-area: status;
+}
 
-.silly-space { grid-area: silly-space; }
+.silly-space {
+  grid-area: silly-space;
+}
 
-.cal { grid-area: cal; }
+.cal {
+  grid-area: cal;
+}
 
-.fun { grid-area: fun; }
+.fun {
+  grid-area: fun;
+}
 
-.webrings { grid-area: webrings; }
+.webrings {
+  grid-area: webrings;
+}
 
-.neighbors { grid-area: neighbors; }
+.neighbors {
+  grid-area: neighbors;
+}
 
-.free-space { grid-area: free-space; }
+.free-space {
+  grid-area: free-space;
+}
 
-.free-erspace { grid-area: free-erspace; }
+.free-erspace {
+  grid-area: free-erspace;
+}
 
 /* Screen larger than 600px? 2 column */
-@media (max-width: 600px) {
-.container {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  gap: 10px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "Banner Banner Banner Banner"
-    "main main main main"
-    ". footer footer ."; 
+@media (max-width: 1000px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Banner Banner Banner Banner"
+      "main main main main"
+      ". footer footer .";
     margin-left: 0%;
     margin-right: 0%;
-}
+  }
 
-.container2 {  
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "intro"
-    "nav"
-    "fun-scroll"
-    "status"
-    "fun"
-    "silly-space"
-    "cal"
-    "neighbors"
-    "webrings"
-    "free-space"
-    "free-erspace";
+  .container2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "nav"
+      "fun-scroll"
+      "status"
+      "fun"
+      "silly-space"
+      "cal"
+      "neighbors"
+      "webrings"
+      "free-space"
+      "free-erspace";
     width: 100%;
-    height: 1200px;
-}
+    height: fit-content;
+  }
 }
 
 .winheader {
-    background-color: #1C6EA4;
-    height: fit-content;
-    width: 100%;
-    border-bottom: 5px ridge #2CABFF;
-    font-size: large;
+  background-color: var(--color-main);
+  height: fit-content;
+  width: 100%;
+  border-bottom: 5px solid #b2f0ff;
+  font-size: large;
 }
