@@ -47,9 +47,11 @@
   flex-direction: row;
 }
 
-lastfm-tracks {
-  box-sizing: border-box;
-  border: 1px solid #000;
-  width: 270px;
-  height: 714px;
+#bannered {
+  content: var(--bimg-1);
+}
+
+.faviconed {
+  content: var(--favicon-1);
+  width: 10px;
 }

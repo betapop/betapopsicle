@@ -23,8 +23,10 @@
 }
 
 body {
-  background-image: url(../public/assets/img/temp/bg_l.png);
+  background-image: var(--bg-image);
   animation: animate-bg 0.92s infinite linear;
+  color: var(--font-main);
+  transition: all ease-in-out 0.3s;
 }
 
 @keyframes animate-bg {
@@ -99,7 +101,7 @@ p {
 }
 
 /* Screen larger than 600px? 2 column */
-@media (max-width: 1000px) {
+@media (max-width: 1080px) {
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -112,6 +114,10 @@ p {
       ". footer footer .";
     margin-left: 0%;
     margin-right: 0%;
+  }
+
+  .nav {
+    height: 200px;
   }
 
   .container2 {
@@ -138,11 +144,60 @@ p {
   background-color: var(--color-main);
   height: fit-content;
   width: 100%;
-  border-bottom: 5px solid #b2f0ff;
+  border-bottom: 5px solid var(--color-fade);
   font-size: large;
+  color: var(--font-secondary);
 }
 
 .small-list {
-  border-bottom: rgb(0, 217, 255) dashed 2px;
+  border-bottom: var(--color-third) dashed 2px;
   padding: 8px;
+}
+
+.nav-list {
+  -webkit-box-shadow: inset 0px 0px 5px 0px var(--color-third);
+  box-shadow: inset 0px 0px 5px 0px var(--color-third);
+  border: 2px solid var(--border-color);
+  padding: 5px;
+  margin: 0%;
+  font-size: 14px;
+  will-change: transform;
+  transition: transform 450ms;
+  background-color: var(--bg-color);
+  color: var(--font-third);
+}
+
+.nav-list:hover {
+  transition: transform 125ms;
+  transform: translateY(-10px);
+}
+
+.nav-header {
+  -webkit-box-shadow: inset 0px 0px 5px 0px var(--color-main);
+  box-shadow: inset 0px 0px 5px 0px var(--color-main);
+  border: 2px solid var(--border-color);
+  padding: 5px;
+  margin: 0%;
+  font-size: 18px;
+  background-color: var(--color-main);
+  color: var(--font-secondary);
+}
+
+a:link {
+  color: var(--font-third);
+}
+
+.tdcal {
+  -webkit-box-shadow: inset 0px 0px 5px 0px var(--color-third);
+  box-shadow: inset 0px 0px 5px 0px var(--color-third);
+  border: 2px solid var(--border-color);
+}
+
+.tdhead {
+  background-color: var(--color-main);
+  color: var(--font-secondary);
+}
+
+.tdbg {
+  background-image: var(--bg-img1);
 }

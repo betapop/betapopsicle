@@ -5,7 +5,7 @@
     <script src="assets/js/main.js"></script>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta charset="UTF-8" />
-    <script src="lastfm.js" type="module"></script> 
+    <script src="lastfm.js" type="module"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/main.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@
     <div id="centered">
     <div class="container">
     <div class="Banner" style="background-color: blue; height: 130px;">
-      <img src="https://png.pngtree.com/thumb_back/fh260/back_pic/00/02/44/5056179b42b174f.jpg" style="width: 100%; height: 100%;">
+      <img src="" id="bannered" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
   <div class="main">
         
@@ -25,14 +25,17 @@
   <div
     class="intro"
     style="
-      border: 5px solid #90d9ec;
+      border: 5px solid;
+      border-color: var(--border-color);
       border-radius: 10px 10px 10px 10px;
       overflow: hidden;
     "
   >
     <div class="winheader"><i class="fa-solid fa-star"></i> intro</div>
-    <div style="width: 2fr; height: 90%; background-color: rgb(231, 255, 255)">
-      <div style="overflow: scroll; height: 100%; padding: 1%">
+    <div
+      style="width: 2fr; height: 90%; background-color: var(--color-secondary)"
+    >
+      <div style="overflow: scroll; height: 100%; padding: 1%" id="intror">
         Nulla facilisis leo justo, at lobortis erat hendrerit ut. Aenean semper
         mauris justo, at accumsan mauris pellentesque ac. Curabitur ac neque
         magna. Pellentesque lectus orci, dictum nec pretium plaisodfacerat,
@@ -44,26 +47,75 @@
   <div
     class="nav"
     style="
-      border: 5px solid #90d9ec;
+      border: 5px solid;
+      border-color: var(--border-color);
       border-radius: 10px 10px 10px 10px;
       overflow: hidden;
     "
   >
-    <div class="winheader"><i class="fa-solid fa-star"></i>nac</div>
-    <div style="width: 2fr; height: 93%; background-color: rgb(231, 255, 255)">
+    <div class="winheader"><i class="fa-solid fa-star"></i>nav</div>
+    <div
+      style="width: 2fr; height: 93%; background-color: var(--color-secondary)"
+    >
       <div style="overflow: scroll; height: 100%; padding: 1%">
-        Nulla facilisis leo justo, at lobortis erat hendrerit ut. Aenean semper
-        mauris justo, at accumsan mauris pellentesque ac. Curabitur ac neque
-        magna. Pellentesque lectus orci, dictum nec pretium plaisodfacerat,
-        iaculis eget velit. Fusce eleifend eleifend urna, sem id, dictum nibh.
-        Etiam volutpat tristique quam a dictum.
+        <!-- personal -->
+        <div class="nav-header">personal</div>
+        <div class="nav-list" onclick="location.href='#';">
+          <img src="" class="faviconed" />
+          abt me >>
+        </div>
+        <div class="nav-list" onclick="location.href='#';">
+          <img src="" class="faviconed" />
+          blog >>
+        </div>
+        <div class="nav-list" onclick="location.href='#';">
+          <img src="" class="faviconed" />
+          media log >>
+        </div>
+        <div class="nav-list" onclick="location.href='#';">
+          <img src="" class="faviconed" />
+          shrines >>
+        </div>
+        <!-- resources -->
+        <div class="nav-header">for u</div>
+        <div class="nav-list" onclick="location.href='#';">
+          <img src="" class="faviconed" />
+          graphics >>
+        </div>
+        <div class="nav-list" onclick="location.href='#';">
+          <img src="" class="faviconed" />
+          bookmarks >>
+        </div>
+        <div class="nav-list" onclick="location.href='#';">
+          <img src="" class="faviconed" />
+          webrings >>
+        </div>
+        <div class="nav-list" onclick="location.href='#';">
+          <img src="" class="faviconed" />
+          credits >>
+        </div>
+        <!-- offsite -->
+        <div class="nav-header">offsite</div>
+        <div class="nav-list" onclick="location.href='#';">
+          <img src="" class="faviconed" />
+          youtube >>
+        </div>
+        <div class="nav-list" onclick="location.href='#';">
+          <img src="" class="faviconed" />
+          neocities page >>
+        </div>
+        <div class="nav-list" onclick="location.href='#';">
+          <img src="" class="faviconed" />
+          github >>
+        </div>
       </div>
     </div>
   </div>
   <div
     class="fun-scroll"
     style="
-      border: 5px solid #90d9ec;
+      border: 5px solid;
+      border-color: var(--border-color);
       border-radius: 10px 10px 10px 10px;
       overflow: hidden;
     "
@@ -71,7 +123,9 @@
     <div class="winheader">
       <i class="fa-solid fa-star"></i> stamps and things
     </div>
-    <div style="width: 2fr; height: 85%; background-color: rgb(231, 255, 255)">
+    <div
+      style="width: 2fr; height: 85%; background-color: var(--color-secondary)"
+    >
       <div style="overflow: scroll; height: 100%; padding: 1%">
         <div class="marquee">
           <div class="track">
@@ -112,36 +166,16 @@
         <div class="marquee" style="height: 30px">
           <div class="track">
             <div class="content">
-              &nbsp;<img
-                src="https://64.media.tumblr.com/61ce150224ce284bb4dafa534765483d/6eac0cbc1027da31-42/s250x400/76bcbeb753b73dd6aad11cf34ecfd15dab594308.gifv"
-              />
-              <img
-                src="https://64.media.tumblr.com/61ce150224ce284bb4dafa534765483d/6eac0cbc1027da31-42/s250x400/76bcbeb753b73dd6aad11cf34ecfd15dab594308.gifv"
-              />
-              <img
-                src="https://64.media.tumblr.com/61ce150224ce284bb4dafa534765483d/6eac0cbc1027da31-42/s250x400/76bcbeb753b73dd6aad11cf34ecfd15dab594308.gifv"
-              />
-              <img
-                src="https://64.media.tumblr.com/61ce150224ce284bb4dafa534765483d/6eac0cbc1027da31-42/s250x400/76bcbeb753b73dd6aad11cf34ecfd15dab594308.gifv"
-              />
-              <img
-                src="https://64.media.tumblr.com/61ce150224ce284bb4dafa534765483d/6eac0cbc1027da31-42/s250x400/76bcbeb753b73dd6aad11cf34ecfd15dab594308.gifv"
-              />
-              <img
-                src="https://64.media.tumblr.com/61ce150224ce284bb4dafa534765483d/6eac0cbc1027da31-42/s250x400/76bcbeb753b73dd6aad11cf34ecfd15dab594308.gifv"
-              />
-              <img
-                src="https://64.media.tumblr.com/61ce150224ce284bb4dafa534765483d/6eac0cbc1027da31-42/s250x400/76bcbeb753b73dd6aad11cf34ecfd15dab594308.gifv"
-              />
-              <img
-                src="https://64.media.tumblr.com/61ce150224ce284bb4dafa534765483d/6eac0cbc1027da31-42/s250x400/76bcbeb753b73dd6aad11cf34ecfd15dab594308.gifv"
-              />
-              <img
-                src="https://64.media.tumblr.com/61ce150224ce284bb4dafa534765483d/6eac0cbc1027da31-42/s250x400/76bcbeb753b73dd6aad11cf34ecfd15dab594308.gifv"
-              />
-              <img
-                src="https://64.media.tumblr.com/61ce150224ce284bb4dafa534765483d/6eac0cbc1027da31-42/s250x400/76bcbeb753b73dd6aad11cf34ecfd15dab594308.gifv"
-              />
+              &nbsp;<img src="assets/img/indexi/blink1.webp" />
+              <img src="assets/img/indexi/blink2.webp" />
+              <img src="assets/img/indexi/blink3.webp" />
+              <img src="assets/img/indexi/blink4.webp" />
+              <img src="assets/img/indexi/blink5.webp" />
+              <img src="assets/img/indexi/blink6.webp" />
+              <img src="assets/img/indexi/blink7.webp" />
+              <img src="assets/img/indexi/blink8.webp" />
+              <img src="assets/img/indexi/blink9.webp" />
+              <img src="assets/img/indexi/blink10.webp" />
             </div>
           </div>
         </div>
@@ -151,12 +185,15 @@
   <div
     class="status"
     style="
-      border: 5px solid #90d9ec;
+      border: 5px solid;
+      border-color: var(--border-color);
       border-radius: 10px 10px 10px 10px;
       overflow: hidden;
     "
   >
-    <div style="width: 2fr; height: 100%; background-color: rgb(231, 255, 255)">
+    <div
+      style="width: 2fr; height: 100%; background-color: var(--color-secondary)"
+    >
       <div style="overflow: scroll; height: 100%; padding: 1%">
         Nulla facilisis leo justo, at lobortis erat hendrerit ut. Aenean semper
         mauris justo, at accumsan mauris pellentesque ac. Curabitur ac neque
@@ -169,13 +206,16 @@
   <div
     class="silly-space"
     style="
-      border: 5px solid #90d9ec;
+      border: 5px solid;
+      border-color: var(--border-color);
       border-radius: 10px 10px 10px 10px;
       overflow: hidden;
     "
   >
     <div class="winheader"><i class="fa-solid fa-star"></i> go places!!</div>
-    <div style="width: 2fr; height: 90%; background-color: rgb(231, 255, 255)">
+    <div
+      style="width: 2fr; height: 90%; background-color: var(--color-secondary)"
+    >
       <div
         style="
           overflow: scroll;
@@ -197,13 +237,16 @@
   <div
     class="cal"
     style="
-      border: 5px solid #90d9ec;
+      border: 5px solid;
+      border-color: var(--border-color);
       border-radius: 10px 10px 10px 10px;
       overflow: hidden;
     "
   >
     <div class="winheader"><i class="fa-solid fa-star"></i> time...</div>
-    <div style="width: 2fr; height: 90%; background-color: rgb(231, 255, 255)">
+    <div
+      style="width: 2fr; height: 90%; background-color: var(--color-secondary)"
+    >
       <div style="overflow: auto; height: 100%; padding: 2%">
         <script language="JavaScript">
           monthnames = new Array(
@@ -260,22 +303,26 @@
           startspaces = thisday - startspaces + 1;
           if (startspaces < 0) startspaces += 7;
           document.write("<table border=1 ");
-          document.write("bordercolor=black>");
+          document.write("bordercolor=white class='tdbg'>");
           document.write(
-            "<tr><td colspan=7><center><font color='violet'><div class='header'>" +
+            "<tr class='tdhead'><td colspan=7><center><font color='white'><div class='header'>" +
               monthnames[thismonth] +
               " " +
               thisyear +
               "</font></strong></center></td></tr>"
           );
           document.write("<tr>");
-          document.write("<td align=center  class='weekend'>Sun</td>");
-          document.write("<td align=center class='day-of-week'>M</td>");
-          document.write("<td align=center class='day-of-week'>Tue</td>");
-          document.write("<td align=center class='day-of-week'>Wed</td>");
-          document.write("<td align=center class='day-of-week'>Thu</td>");
-          document.write("<td align=center class='day-of-week'>F</td>");
-          document.write("<td align=center  class='weekend'>Sat</td>");
+          document.write("<td align=center class='weekend, tdcal'>Sun</td>");
+          document.write("<td align=center class='day-of-week, tdcal'>M</td>");
+          document.write(
+            "<td align=center class='day-of-week, tdcal'>Tue</td>"
+          );
+          document.write("<td align=center class='day-of-week, tdcal'>W</td>");
+          document.write(
+            "<td align=center class='day-of-week, tdcal'>Thu</td>"
+          );
+          document.write("<td align=center class='day-of-week, tdcal'>F</td>");
+          document.write("<td align=center  class='weekend, tdcal'>Sat</td>");
           document.write("</tr>");
           document.write("<tr>");
           for (s = 0; s < startspaces; s++) {
@@ -302,7 +349,7 @@
                 }
               }
               if (count == thisdate) {
-                document.write("<font color='#fd90b3'><strong>");
+                document.write("<font color='var(--color-third)'><strong>");
               }
               if (count <= monthdays[thismonth]) {
                 document.write(count);
@@ -329,26 +376,32 @@
   <div
     class="fun"
     style="
-      border: 5px solid #90d9ec;
+      border: 5px solid;
+      border-color: var(--border-color);
       border-radius: 10px 10px 10px 10px;
       overflow: hidden;
     "
   >
     <div class="winheader"><i class="fa-solid fa-star"></i> fun</div>
-    <div style="width: 2fr; height: 95%; background-color: rgb(231, 255, 255)">
-      <div style="overflow: scroll; height: 100%; padding: 1%"></div>
+    <div
+      style="width: 2fr; height: 95%; background-color: var(--color-secondary)"
+    >
+      <div style="overflow: scroll; height: 100%; padding: 1%">hhh</div>
     </div>
   </div>
   <div
     class="webrings"
     style="
-      border: 5px solid #90d9ec;
+      border: 5px solid;
+      border-color: var(--border-color);
       border-radius: 10px 10px 10px 10px;
       overflow: hidden;
     "
   >
     <div class="winheader"><i class="fa-solid fa-star"></i> webrings</div>
-    <div style="width: 2fr; height: 95%; background-color: rgb(231, 255, 255)">
+    <div
+      style="width: 2fr; height: 95%; background-color: var(--color-secondary)"
+    >
       <div style="overflow: scroll; height: 100%; padding: 1%">
         Nulla facilisis leo justo, at lobortis erat hendrerit ut. Aenean semper
         mauris justo, at accumsan mauris pellentesque ac. Curabitur ac neque
@@ -361,13 +414,16 @@
   <div
     class="neighbors"
     style="
-      border: 5px solid #90d9ec;
+      border: 5px solid;
+      border-color: var(--border-color);
       border-radius: 10px 10px 10px 10px;
       overflow: hidden;
     "
   >
     <div class="winheader"><i class="fa-solid fa-star"></i> neighbors</div>
-    <div style="width: 2fr; height: 85%; background-color: rgb(231, 255, 255)">
+    <div
+      style="width: 2fr; height: 85%; background-color: var(--color-secondary)"
+    >
       <div style="overflow: scroll; height: 100%; padding: 1%">
         Nulla facilisis leo justo, at lobortis erat hendrerit ut. Aenean semper
         mauris justo, at accumsan mauris pellentesque ac. Curabitur ac neque
@@ -380,7 +436,8 @@
   <div
     class="free-space"
     style="
-      border: 5px solid #90d9ec;
+      border: 5px solid;
+      border-color: var(--border-color);
       border-radius: 10px 10px 10px 10px;
       overflow: hidden;
     "
@@ -388,15 +445,20 @@
     <div class="winheader">
       <i class="fa-solid fa-star"></i> what am i doing?
     </div>
-    <div style="width: 2fr; height: 90%; background-color: rgb(231, 255, 255)">
+    <div
+      style="width: 2fr; height: 90%; background-color: var(--color-secondary)"
+    >
       <div style="overflow: scroll; height: 100%; padding: 1%">
         <div class="small-list">
           <div class="status">
+            <img src="../public/assets/img/indexi/favi6.gif" width="15px" />
+            &nbsp;
             <p id="status-details">loading...</p>
             <div id="status-blob"></div>
           </div>
         </div>
         <div class="small-list">
+          <img src="../public/assets/img/indexi/favi7.gif" width="15px" />
           listening to:
           <iframe
             src="https://petrapixel.neocities.org/widgets/lastfm?center=0&marquee=0&color=#0d7d0d&username=betapopsicle&"
@@ -406,19 +468,38 @@
             height="35px"
           ></iframe>
         </div>
+        <div class="small-list">
+          <img src="../public/assets/img/indexi/favi4.gif" width="15px" />
+          watching:<br />
+          spy x family s3
+        </div>
+        <div class="small-list">
+          <img src="../public/assets/img/indexi/favi3.gif" width="15px" />
+          playing:<br />
+          detroit become human
+        </div>
+        <div class="small-list">
+          <img src="../public/assets/img/indexi/favi5.gif" width="15px" />
+          drawing:<br />
+          my ocs .... my babies...
+        </div>
+        <br />
       </div>
     </div>
   </div>
   <div
     class="free-erspace"
     style="
-      border: 5px solid #90d9ec;
+      border: 5px solid;
+      border-color: var(--border-color);
       border-radius: 10px 10px 10px 10px;
       overflow: hidden;
     "
   >
     <div class="winheader"><i class="fa-solid fa-star"></i> things 2</div>
-    <div style="width: 2fr; height: 90%; background-color: rgb(231, 255, 255)">
+    <div
+      style="width: 2fr; height: 90%; background-color: var(--color-secondary)"
+    >
       <div style="overflow: scroll; height: 100%; padding: 1%">
         Nulla facilisis leo justo, at lobortis erat hendrerit ut. Aenean semper
         mauris justo, at accumsan mauris pellentesque ac. Curabitur ac neque
