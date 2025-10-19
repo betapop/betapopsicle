@@ -120,6 +120,14 @@ p {
     height: 200px;
   }
 
+  .cal {
+    display: none;
+  }
+
+  .silly-space {
+    display: none;
+  }
+
   .container2 {
     display: grid;
     grid-template-columns: 1fr;
@@ -129,8 +137,6 @@ p {
       "fun-scroll"
       "status"
       "fun"
-      "silly-space"
-      "cal"
       "neighbors"
       "webrings"
       "free-space"
