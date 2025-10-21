@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <title>betapopsicle</title>
-    <script src="assets/js/main.js?nocache=1761010497222"></script>
+    <script src="assets/js/main.js?nocache=1761053971815"></script>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta charset="UTF-8" />
     <script src="lastfm.js" type="module"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/main.css?nocache=1761010497222" />
+    <link rel="stylesheet" href="assets/main.css?nocache=1761053971815" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
     <link href="../favicon.ico" rel="icon" type="image/x-icon" />
@@ -183,7 +183,7 @@
     </div>
   </div>
   <div
-    class="status"
+    class="statuss"
     style="
       border: 5px solid;
       border-color: var(--border-color);
@@ -192,14 +192,86 @@
     "
   >
     <div
-      style="width: 2fr; height: 100%; background-color: var(--color-secondary)"
+      style="
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-secondary);
+      "
     >
-      <div style="overflow: scroll; height: 100%; padding: 1%">
-        Nulla facilisis leo justo, at lobortis erat hendrerit ut. Aenean semper
-        mauris justo, at accumsan mauris pellentesque ac. Curabitur ac neque
-        magna. Pellentesque lectus orci, dictum nec pretium plaisodfacerat,
-        iaculis eget velit. Fusce eleifend eleifend urna, sem id, dictum nibh.
-        Etiam volutpat tristique quam a dictum.
+      <div class="winheader">
+        <i class="fa-solid fa-star"></i> talk to aislin!
+      </div>
+      <div
+        style="
+          overflow: scroll;
+          height: 100%;
+          padding: 1%;
+          background-image: url(https://cdnb.artstation.com/p/assets/images/images/029/363/725/large/shin-w-16-9-2.jpg?1597300886&dl=1);
+          background-size: cover;
+        "
+      >
+        <!-- image -->
+        <div
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <img
+            id="myImage"
+            class="hiddenNOW"
+            src="https://37fed4cbab.clvaw-cdnwnd.com/bbff175222e0e1de36a5f9c6de70a552/200000351-636f8636fb/PAliceDefault.webp?ph=37fed4cbab"
+            style="width: 120px"
+          />
+        </div>
+        <!-- textbox -->
+        <div style="width: 95%; margin-right: 3%">
+          <div
+            style="
+              background: rgba(8, 52, 140, 0.76);
+              height: 6%;
+              width: 20%;
+              border-top-left-radius: 8px;
+              border-top-right-radius: 8px;
+              border: white 2px solid;
+              float: left;
+              border-bottom: 0;
+            "
+          >
+            <span style="color: white; font-size: 16px">Beta</span>
+          </div>
+          <div
+            style="
+              background: rgba(57, 57, 57, 0.877);
+              width: 100%;
+              border-radius: 8px;
+              border: white 2px solid;
+              border-top-left-radius: 0px;
+              clear: both;
+              padding: 10px;
+              text-align: left;
+              overflow-x: hidden;
+              overflow-y: auto;
+            "
+          >
+            <span style="color: white; font-size: 16px">
+              <div id="chgtext" class="textboxed">This is my current text</div>
+              <a
+                href="#"
+                onclick="document.getElementById('chgtext').innerHTML='Change the text using javascript'; document.getElementById('myImage').src='https://37fed4cbab.clvaw-cdnwnd.com/bbff175222e0e1de36a5f9c6de70a552/200000352-dc737dc73b/PAliceHappy.webp?ph=37fed4cbab'"
+                >Change text</a
+              >
+              &nbsp; &nbsp;
+              <a
+                href="#"
+                onclick="document.getElementById('chgtext').innerHTML='Text will be changed based on the other text'; document.getElementById('myImage').src='https://37fed4cbab.clvaw-cdnwnd.com/bbff175222e0e1de36a5f9c6de70a552/200000353-8a3d48a3d7/PAliceHappyBlush.webp?ph=37fed4cbab'"
+                >Change text2</a
+              >&nbsp; &nbsp;
+              <a
+                href="#"
+                onclick="document.getElementById('chgtext').innerHTML='This is another sample changed text on click the onther text. This is another sample changed text on click the onther text'; document.getElementById('myImage').src='https://37fed4cbab.clvaw-cdnwnd.com/bbff175222e0e1de36a5f9c6de70a552/200000354-b8c1db8c1f/PAliceWorried.webp?ph=37fed4cbab'"
+                >Change text3</a
+              >&nbsp; &nbsp;
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </div>

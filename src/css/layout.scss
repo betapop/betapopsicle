@@ -48,8 +48,8 @@ p {
   grid-template-areas:
     "intro intro intro nav"
     "fun-scroll fun-scroll fun-scroll nav"
-    "status status silly-space fun"
-    "status status cal fun"
+    "statuss statuss silly-space fun"
+    "statuss statuss cal fun"
     "neighbors neighbors webrings webrings"
     "free-space free-erspace webrings webrings";
   width: 100%;
@@ -75,8 +75,8 @@ p {
   height: 85%;
 }
 
-.status {
-  grid-area: status;
+.statuss {
+  grid-area: statuss;
   box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -115,6 +115,10 @@ p {
   box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
+.textboxed {
+  height: 50px;
+}
+
 /* Screen larger than 600px? 2 column */
 @media (max-width: 1080px) {
   .container {
@@ -143,6 +147,10 @@ p {
     height: 200px;
   }
 
+  .statuss {
+    height: 200px;
+  }
+
   .fullguy {
     height: 100%;
   }
@@ -155,6 +163,15 @@ p {
     display: none;
   }
 
+  .hiddenNOW {
+    display: none;
+  }
+
+  .textboxed {
+    height: 120px;
+    font-size: large;
+  }
+
   .container2 {
     display: grid;
     grid-template-columns: 1fr;
@@ -162,7 +179,7 @@ p {
       "intro"
       "nav"
       "fun-scroll"
-      "status"
+      "statuss"
       "fun"
       "neighbors"
       "webrings"
