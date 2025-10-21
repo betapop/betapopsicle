@@ -55,3 +55,28 @@
   content: var(--favicon-1);
   width: 10px;
 }
+
+#homebg {
+  background-image: var(--home-image);
+  background-size: cover;
+}
+
+#homebg a {
+  color: gray;
+}
+
+#myImage {
+  content: var(--ais-normal);
+}
+
+.aistalk {
+  content: var(--ais-talk) !important;
+}
+
+.aissad {
+  content: var(--ais-sad) !important;
+}
+
+.aisblush {
+  content: var(--ais-blush) !important;
+}

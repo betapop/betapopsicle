@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <title>betapopsicle</title>
-    <script src="assets/js/main.js?nocache=1761053971815"></script>
+    <script src="assets/js/main.js?nocache=1761076698837"></script>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta charset="UTF-8" />
     <script src="lastfm.js" type="module"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/main.css?nocache=1761053971815" />
+    <link rel="stylesheet" href="assets/main.css?nocache=1761076698837" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
     <link href="../favicon.ico" rel="icon" type="image/x-icon" />
@@ -201,25 +201,24 @@
       <div class="winheader">
         <i class="fa-solid fa-star"></i> talk to aislin!
       </div>
-      <div
-        style="
-          overflow: scroll;
-          height: 100%;
-          padding: 1%;
-          background-image: url(https://cdnb.artstation.com/p/assets/images/images/029/363/725/large/shin-w-16-9-2.jpg?1597300886&dl=1);
-          background-size: cover;
-        "
-      >
+      <div style="overflow: scroll; height: 100%; padding: 1%" id="homebg">
+        <script>
+          var superRemove = function () {
+            document.getElementById("myImage").classList.remove("aisblush");
+            document.getElementById("myImage").classList.remove("aissad");
+            document.getElementById("myImage").classList.remove("aistalk");
+          };
+        </script>
         <!-- image -->
         <div
           style="display: flex; justify-content: center; align-items: center"
         >
-          <img
-            id="myImage"
-            class="hiddenNOW"
-            src="https://37fed4cbab.clvaw-cdnwnd.com/bbff175222e0e1de36a5f9c6de70a552/200000351-636f8636fb/PAliceDefault.webp?ph=37fed4cbab"
-            style="width: 120px"
-          />
+          <a
+            href="#"
+            onclick="document.getElementById('chgtext').innerHTML='Wow I got pet!'; superRemove(); document.getElementById('myImage').classList.add('aisblush');"
+          >
+            <img id="myImage" class="hiddenNOW" style="width: 265px" />
+          </a>
         </div>
         <!-- textbox -->
         <div style="width: 95%; margin-right: 3%">
@@ -235,7 +234,7 @@
               border-bottom: 0;
             "
           >
-            <span style="color: white; font-size: 16px">Beta</span>
+            <span style="color: white; font-size: 16px">Aislin</span>
           </div>
           <div
             style="
@@ -252,22 +251,28 @@
             "
           >
             <span style="color: white; font-size: 16px">
-              <div id="chgtext" class="textboxed">This is my current text</div>
+              <div id="chgtext" class="textboxed">
+                hey there!~ hopefully you're doing good!
+              </div>
               <a
                 href="#"
-                onclick="document.getElementById('chgtext').innerHTML='Change the text using javascript'; document.getElementById('myImage').src='https://37fed4cbab.clvaw-cdnwnd.com/bbff175222e0e1de36a5f9c6de70a552/200000352-dc737dc73b/PAliceHappy.webp?ph=37fed4cbab'"
-                >Change text</a
+                onclick="document.getElementById('chgtext').innerHTML='hi!'; superRemove(); document.getElementById('myImage').classList.add('aistalk');"
+                >> hi :3</a
               >
               &nbsp; &nbsp;
               <a
                 href="#"
-                onclick="document.getElementById('chgtext').innerHTML='Text will be changed based on the other text'; document.getElementById('myImage').src='https://37fed4cbab.clvaw-cdnwnd.com/bbff175222e0e1de36a5f9c6de70a552/200000353-8a3d48a3d7/PAliceHappyBlush.webp?ph=37fed4cbab'"
-                >Change text2</a
+                onclick="document.getElementById('chgtext').innerHTML='i mean, its pretty weird being in a box... but otherwise pretty good! thank you for asking!'; superRemove(); document.getElementById('myImage').classList.add('aissad')"
+                >> how are you?</a
               >&nbsp; &nbsp;
+              <script>
+                var statuse =
+                  "<iframe src='https://petrapixel.neocities.org/widgets/statuscafe?center=0&marquee=0&font-family=Georgia&font-size=16px&color=#fff&linkColor=#fff&username=betapop&hideUsername=1' frameborder='0' title='Status.Cafe Status' style='height: 70px'></iframe>";
+              </script>
               <a
                 href="#"
-                onclick="document.getElementById('chgtext').innerHTML='This is another sample changed text on click the onther text. This is another sample changed text on click the onther text'; document.getElementById('myImage').src='https://37fed4cbab.clvaw-cdnwnd.com/bbff175222e0e1de36a5f9c6de70a552/200000354-b8c1db8c1f/PAliceWorried.webp?ph=37fed4cbab'"
-                >Change text3</a
+                onclick="document.getElementById('chgtext').innerHTML=statuse; superRemove()"
+                >> what's betas status?</a
               >&nbsp; &nbsp;
             </span>
           </div>
