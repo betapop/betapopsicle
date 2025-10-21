@@ -58,46 +58,61 @@ p {
 
 .intro {
   grid-area: intro;
+  box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .nav {
   grid-area: nav;
+  box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .fun-scroll {
   grid-area: fun-scroll;
+  box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.fullguy {
+  height: 85%;
 }
 
 .status {
   grid-area: status;
+  box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .silly-space {
   grid-area: silly-space;
+  box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .cal {
   grid-area: cal;
+  box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .fun {
   grid-area: fun;
+  box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .webrings {
   grid-area: webrings;
+  box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .neighbors {
   grid-area: neighbors;
+  box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .free-space {
   grid-area: free-space;
+  box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .free-erspace {
   grid-area: free-erspace;
+  box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* Screen larger than 600px? 2 column */
@@ -118,6 +133,18 @@ p {
 
   .nav {
     height: 200px;
+  }
+
+  .fun {
+    height: 200px;
+  }
+
+  .neighbors {
+    height: 200px;
+  }
+
+  .fullguy {
+    height: 100%;
   }
 
   .cal {
@@ -158,6 +185,12 @@ p {
 .small-list {
   border-bottom: var(--color-third) dashed 2px;
   padding: 8px;
+}
+
+.small-bord {
+  border-bottom: var(--color-third) dashed 2px;
+  margin: 1%;
+  padding: 1%;
 }
 
 .nav-list {
@@ -206,4 +239,9 @@ a:link {
 
 .tdbg {
   background-image: var(--bg-img1);
+}
+
+.grid-item {
+  width: 88px;
+  height: 31px;
 }
