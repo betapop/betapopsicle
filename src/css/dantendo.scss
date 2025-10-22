@@ -12,27 +12,27 @@
 
   /* welcome image / background ?
         i love using a png for this */
-  --welcome-image: url("https://cdn.donmai.us/original/bb/9f/bb9f9d4e94d86fb9346f278de7fc8c5a.gif");
+  --welcome-image: url("../public/assets/img/indexi/phen.webp");
 
   /* custom tab titles ! */
   --tab-1-title: "about me";
-  --tab-2-title: "love/hate";
-  --tab-3-title: "byf";
-  --tab-4-title: "dni";
+  --tab-2-title: "loves";
+  --tab-3-title: "fun fact";
+  --tab-4-title: "anyways";
 
   /* text that goes after every tab ! 
         use '\A' without quotes to form a line break */
-  --tab-1-content: "i don't know... \A who am i?";
-  --tab-2-content: "likes: girls and boys \A dislikes: kids";
-  --tab-3-content: "i'm mentally insane";
-  --tab-4-content: "normal people";
+  --tab-1-content: "hii i like old nintendo \A consoles :)";
+  --tab-2-content: "likes: pw:aa, rhythm thief, mii games";
+  --tab-3-content: "i brought a ds lite thinking it was a 3ds";
+  --tab-4-content: "have fun here!";
 
   /* thumbnails ! make sure you put your image
         link INSIDE the quotation marks.... please */
-  --tab-1-thumbnail: url("https://images2.imgbox.com/da/68/jgYuVTnR_o.gif");
-  --tab-2-thumbnail: url("https://images2.imgbox.com/bb/92/rDL6BjcM_o.gif");
-  --tab-3-thumbnail: url("https://images2.imgbox.com/4a/e8/oPtxhCUI_o.gif");
-  --tab-4-thumbnail: url("https://images2.imgbox.com/03/02/aP4PueaS_o.gif");
+  --tab-1-thumbnail: url("../public/assets/img/indexi/3dsicons-133.png");
+  --tab-2-thumbnail: url("../public/assets/img/indexi/3dsicons-1207.png");
+  --tab-3-thumbnail: url("../public/assets/img/indexi/3dsicons-658.png");
+  --tab-4-thumbnail: url("../public/assets/img/indexi/3dsicons-873.png");
 }
 /* wall of code itself down below... if you know what you're doing and wanna change advanced stuff, make it readable at unminify.com */
 .dantendo,

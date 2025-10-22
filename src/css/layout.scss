@@ -29,6 +29,9 @@ body {
   transition: all ease-in-out 0.3s;
 }
 
+body a {
+  color: var(--font-link);
+}
 @keyframes animate-bg {
   100% {
     background-position: 50px 50px;
