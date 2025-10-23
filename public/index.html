@@ -2,13 +2,15 @@
 <html lang="en">
   <head>
     <title>betapopsicle</title>
-    <script src="assets/js/main.js?nocache=1761161771067"></script>
+    <script src="assets/js/main.js?nocache=1761228330387"></script>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta charset="UTF-8" />
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="https://beta.iframe.chat/scripts/main.min.js"></script>
     <script src="lastfm.js" type="module"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/main.css?nocache=1761161771067" />
+    <link rel="stylesheet" href="assets/main.css?nocache=1761228330387" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
     <link href="..//assets/img/temp/favi.png" rel="icon" type="image/x-icon" />
@@ -22,6 +24,23 @@
     </div>
   <div class="main">
         
+<div id="mobile-warning">
+  <div class="nav-header">
+    <button
+      class="nav-list"
+      style="padding: 3px; float: right"
+      onclick="document.getElementById( 'mobile-warning' ).style.display = 'none';"
+    >
+      close
+    </button>
+    warning!
+  </div>
+  <div style="padding: 1%">
+    hi! if you see this, you're probably on a smaller device size. which is
+    perfectly okay, but some things might look a little off or wonky! everything
+    should hopefully be passable, but just a general heads up!
+  </div>
+</div>
 <div class="container2">
   <div
     class="intro"
@@ -36,12 +55,32 @@
     <div
       style="width: 2fr; height: 90%; background-color: var(--color-secondary)"
     >
-      <div style="overflow: scroll; height: 100%; padding: 1%" id="intror">
-        Nulla facilisis leo justo, at lobortis erat hendrerit ut. Aenean semper
-        mauris justo, at accumsan mauris pellentesque ac. Curabitur ac neque
-        magna. Pellentesque lectus orci, dictum nec pretium plaisodfacerat,
-        iaculis eget velit. Fusce eleifend eleifend urna, sem id, dictum nibh.
-        Etiam volutpat tristique quam a dictum.
+      <div style="overflow: scroll; height: 100%; padding: 0%" id="intror">
+        <div style="width: 20%; height: 95%; float: left">
+          <img src="assets/img/temp/kitty.gif" width="110px" />
+        </div>
+        <div style="width: 20%; float: right; height: 95%">
+          <div class="nav-header">quick links</div>
+          <div class="small-list">
+            <a href="#">something here</a>
+          </div>
+          <div class="small-list">
+            <a href="#">something here</a>
+          </div>
+          <div class="small-list">
+            <a href="#">something here</a>
+          </div>
+        </div>
+        <div
+          style="
+            width: 60%;
+            background-color: purple;
+            height: 95%;
+            float: right;
+          "
+        >
+          lorem ispum
+        </div>
       </div>
     </div>
   </div>
@@ -101,7 +140,10 @@
           <img src="" class="faviconed" />
           youtube >>
         </div>
-        <div class="nav-list" onclick="location.href='#';">
+        <div
+          class="nav-list"
+          onclick="location.href='https://neocities.org/site/betapopsicle';"
+        >
           <img src="" class="faviconed" />
           neocities page >>
         </div>

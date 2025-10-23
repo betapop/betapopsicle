@@ -122,8 +122,12 @@ p {
   height: 50px;
 }
 
+#mobile-warning {
+  display: none;
+}
+
 /* Screen larger than 600px? 2 column */
-@media (max-width: 1080px) {
+@media (max-width: 800px) {
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -146,11 +150,28 @@ p {
     height: 200px;
   }
 
+  #mobile-warning {
+    display: block;
+    border: var(--font-link) 2px solid;
+    background-color: var(--warning-color);
+    width: 98%;
+    height: fit-content;
+    padding: 5px;
+    margin-bottom: 1%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
+
   .neighbors {
     height: 200px;
   }
 
   .statuss {
+    height: 200px;
+  }
+
+  .intro {
     height: 200px;
   }
 
@@ -264,4 +285,36 @@ a:link {
 .grid-item {
   width: 88px;
   height: 31px;
+}
+
+@media (min-width: 800px) and (max-width: 1080px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Banner Banner Banner Banner"
+      "main main main main"
+      ". footer footer .";
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media (min-width: 1080px) and (max-width: 1380px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Banner Banner Banner Banner"
+      "main main main main"
+      ". footer footer .";
+    margin-left: 13%;
+    margin-right: 13%;
+  }
 }
