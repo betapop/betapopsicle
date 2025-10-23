@@ -27,6 +27,12 @@ body {
   animation: animate-bg 0.92s infinite linear;
   color: var(--font-main);
   transition: all ease-in-out 0.3s;
+  font-family: Peaberry;
+}
+
+@font-face {
+  font-family: Peaberry;
+  src: url("/public/assets/BadComic-Regular.ttf");
 }
 
 body a {
@@ -126,6 +132,14 @@ p {
   display: none;
 }
 
+#mobile-intro {
+  width: 59%;
+}
+
+#mobile-link {
+  width: 20%;
+}
+
 /* Screen larger than 600px? 2 column */
 @media (max-width: 800px) {
   .container {
@@ -161,6 +175,14 @@ p {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
+  }
+
+  #mobile-intro {
+    width: 58%;
+  }
+
+  #mobile-link {
+    width: 36%;
   }
 
   .neighbors {
@@ -250,6 +272,19 @@ p {
 .nav-list:hover {
   transition: transform 125ms;
   transform: translateY(-10px);
+}
+
+.nav-listed {
+  -webkit-box-shadow: inset 0px 0px 5px 0px var(--color-third);
+  box-shadow: inset 0px 0px 5px 0px var(--color-third);
+  border: 2px solid var(--border-color);
+  padding: 5px;
+  margin: 0%;
+  font-size: 14px;
+  will-change: transform;
+  transition: transform 450ms;
+  background-color: var(--bg-color);
+  color: var(--font-third);
 }
 
 .nav-header {

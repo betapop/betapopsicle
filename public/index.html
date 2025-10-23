@@ -2,15 +2,17 @@
 <html lang="en">
   <head>
     <title>betapopsicle</title>
-    <script src="assets/js/main.js?nocache=1761228330387"></script>
+    <script src="assets/js/main.js?nocache=1761234243618"></script>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta charset="UTF-8" />
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">    <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="https://beta.iframe.chat/scripts/main.min.js"></script>
     <script src="lastfm.js" type="module"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/main.css?nocache=1761228330387" />
+    <link rel="stylesheet" href="assets/main.css?nocache=1761234243618" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
     <link href="..//assets/img/temp/favi.png" rel="icon" type="image/x-icon" />
@@ -56,10 +58,10 @@
       style="width: 2fr; height: 90%; background-color: var(--color-secondary)"
     >
       <div style="overflow: scroll; height: 100%; padding: 0%" id="intror">
-        <div style="width: 20%; height: 95%; float: left">
+        <div style="width: 18%; height: 95%; float: left" class="hiddenNOW">
           <img src="assets/img/temp/kitty.gif" width="110px" />
         </div>
-        <div style="width: 20%; float: right; height: 95%">
+        <div style="float: right; height: 95%" id="mobile-link">
           <div class="nav-header">quick links</div>
           <div class="small-list">
             <a href="#">something here</a>
@@ -72,14 +74,30 @@
           </div>
         </div>
         <div
+          id="mobile-intro"
+          class="nav-listed"
           style="
-            width: 60%;
-            background-color: purple;
-            height: 95%;
-            float: right;
+            background-color: var(--bg-color);
+            height: 90%;
+            float: left;
+            color: var(--font-main);
+            overflow: scroll;
           "
         >
-          lorem ispum
+          <span style="color: var(--font-link); font-size: 30px">
+            <i> welcome to the page! </i>
+          </span>
+          <br />
+          <div style="padding: 1%">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec
+            erat quam. Sed vestibulum dignissim magna sit amet efficitur. In
+            sagittis sit amet libero sit amet sollicitudin. Ut ipsum felis,
+            condimentum eu egestas et.
+          </div>
+          <span style="color: var(--font-link); font-size: 15px">
+            hosted by neocities
+            <img src="https://neocities.org/img/heartcat.png" width="15px" />
+          </span>
         </div>
       </div>
     </div>
@@ -387,7 +405,7 @@
     <div
       style="width: 2fr; height: 90%; background-color: var(--color-secondary)"
     >
-      <div style="overflow: auto; height: 100%; padding: 2%">
+      <div style="overflow: auto; height: 100%; padding: 2%; font-size: 14px">
         <script language="JavaScript">
           monthnames = new Array(
             "January",
