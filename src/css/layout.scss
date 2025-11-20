@@ -287,6 +287,19 @@ p {
   color: var(--font-third);
 }
 
+.nav-two {
+  -webkit-box-shadow: inset 0px 0px 5px 0px var(--color-third);
+  box-shadow: inset 0px 0px 5px 0px var(--color-third);
+  border: 2px solid var(--border-color);
+  padding: 5px;
+  margin: 0%;
+  font-size: 14px;
+  will-change: transform;
+  transition: transform 450ms;
+  background-image: var(--bg-img1);
+  color: var(--font-third);
+}
+
 .nav-header {
   -webkit-box-shadow: inset 0px 0px 5px 0px var(--color-main);
   box-shadow: inset 0px 0px 5px 0px var(--color-main);

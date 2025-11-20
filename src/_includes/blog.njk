@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <script src="assets/js/main.js{{ nocache }}"></script>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/blog.css{{ nocache }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="{{ nesting }}/assets/img/temp/favi.png"
+      rel="icon"
+      type="image/x-icon"
+    />
+  </head>
+  <body class="{{ bodyClass }}">
+    <div class="main">
+      {{ content | safe }}
+      <br />
+      <div class="footer">
+        <footer>
+          made by beta | 2025-forever |
+          <a href="https://github.com/betapop/betapopsicle" target="_blank"
+            >github</a
+          >
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
