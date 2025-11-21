@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>blog</title>
-    <script src="assets/js/main.js?nocache=1763736481510"></script>
+    <script src="assets/js/main.js?nocache=1763745401912"></script>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta charset="UTF-8" />
     <script src="https://unpkg.com/@popperjs/core@2"></script>
@@ -14,7 +14,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/blog.css?nocache=1763736481510" />
+    <link rel="stylesheet" href="css/blog.css?nocache=1763745401912" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="..//assets/img/temp/favi.png"
@@ -135,8 +135,77 @@
         </div>
 
         <div id="Tokyo" class="tabcontent">
-          <h3>Tokyo</h3>
-          <p>Tokyo is the capital of Japan.</p>
+          <div class="button-group filter-button-group">
+            <button class="is-checked" data-filter="*">All</button>
+            <button data-filter=".design">Design</button>
+            <button data-filter=".photography">Photography</button>
+            <button data-filter=".illustration">Illustration</button>
+          </div>
+          <div id="greid-image">
+            <div class="grid">
+              <div class="grid-sizer"></div>
+              <div class="grid-item design">
+                <img src="https://picsum.photos/1000/1500/?image=1064" />
+              </div>
+              <div class="grid-item photography">
+                <img src="https://picsum.photos/1000/1000/?image=1053" />
+              </div>
+              <div class="grid-item illustration">
+                <img src="https://picsum.photos/1000/1000/?image=1003" />
+              </div>
+              <div class="grid-item design">
+                <img src="https://picsum.photos/1000/800/?image=1061" />
+              </div>
+              <div class="grid-item photography">
+                <img src="https://picsum.photos/1000/800/?image=1038" />
+              </div>
+              <div class="grid-item illustration">
+                <img src="https://picsum.photos/1000/1500/?image=790" />
+              </div>
+              <div class="grid-item design">
+                <img src="https://picsum.photos/1000/800/?image=484" />
+              </div>
+              <div class="grid-item photography">
+                <img src="https://picsum.photos/1000/600/?image=1041" />
+              </div>
+              <div class="grid-item illustration">
+                <img src="https://picsum.photos/1000/600/?image=718" />
+              </div>
+              <div class="grid-item design">
+                <img src="https://picsum.photos/1000/1500/?image=1044" />
+              </div>
+              <div class="grid-item design">
+                <img src="https://picsum.photos/1000/1500/?image=1064" />
+              </div>
+              <div class="grid-item photography">
+                <img src="https://picsum.photos/1000/1000/?image=1053" />
+              </div>
+              <div class="grid-item illustration">
+                <img src="https://picsum.photos/1000/1000/?image=1003" />
+              </div>
+              <div class="grid-item design">
+                <img src="https://picsum.photos/1000/800/?image=1061" />
+              </div>
+              <div class="grid-item photography">
+                <img src="https://picsum.photos/1000/800/?image=1038" />
+              </div>
+              <div class="grid-item illustration">
+                <img src="https://picsum.photos/1000/1500/?image=790" />
+              </div>
+              <div class="grid-item design">
+                <img src="https://picsum.photos/1000/800/?image=484" />
+              </div>
+              <div class="grid-item photography">
+                <img src="https://picsum.photos/1000/600/?image=1041" />
+              </div>
+              <div class="grid-item illustration">
+                <img src="https://picsum.photos/1000/600/?image=718" />
+              </div>
+              <div class="grid-item design">
+                <img src="https://picsum.photos/1000/1500/?image=1044" />
+              </div>
+            </div>
+          </div>
         </div>
 
         <script>
@@ -180,6 +249,37 @@
   myAudio.onpause = function () {
     isPlaying = false;
   };
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
+<script>
+  $("window").imagesLoaded(function () {
+    jQuery(function () {
+      var $container = $(".grid");
+      $container.imagesLoaded(function () {
+        $container.isotope({
+          itemSelector: ".grid-item",
+          percentPosition: true,
+          columnWidth: ".grid-sizer",
+        });
+      });
+
+      $(".filter-button-group").on("click", "button", function () {
+        var filterValue = $(this).attr("data-filter");
+        $container.isotope({ filter: filterValue });
+      });
+
+      $(".button-group").each(function (i, buttonGroup) {
+        var $buttonGroup = $(buttonGroup);
+        $buttonGroup.on("click", "button", function () {
+          $buttonGroup.find(".is-checked").removeClass("is-checked");
+          $(this).addClass("is-checked");
+        });
+      });
+    });
+  });
 </script>
 
       <br />

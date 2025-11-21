@@ -52,6 +52,20 @@
     border-image: url("/public/assets/img/sitest/lace.png") 8 fill round;
 }
 
+.grid-sizer,
+.grid-item {
+    width: 33.333%;
+}
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
+}
+
 @media (max-width: 800px) {
     .blog-main {
         display: grid;
@@ -207,4 +221,9 @@ img:hover {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+}
+
+#greid-image {
+    height: 750px;
+    overflow: scroll;
 }
