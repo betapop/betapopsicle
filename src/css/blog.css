@@ -1,0 +1,210 @@
+.blog-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "blog-posts blog-posts updates";
+    height: fit-content;
+}
+
+.updates {
+    grid-area: updates;
+    background-color: aqua;
+}
+
+.blog-posts {
+    grid-area: blog-posts;
+    background-color: blue;
+}
+
+.blog-body {
+    width: 900px;
+    background-color: rgb(255, 231, 252);
+}
+
+.blog-color {
+    border: double rgb(250, 155, 187) 2px;
+    background-color: rgb(253, 222, 227);
+}
+
+.blog-alt {
+    border: solid rgb(250, 155, 187) 2px;
+    background-color: rgb(255, 249, 250);
+    -webkit-box-shadow: inset 0px 0px 15px 3px rgba(255, 220, 247, 0.77);
+    box-shadow: inset 0px 0px 15px 8px rgba(255, 220, 247, 0.77);
+    width: 98%;
+    padding: 1%;
+    font-size: 11px;
+    height: fit-content;
+}
+
+.interest-text {
+    font-size: 16px;
+    color: rgb(190, 64, 106);
+    font-style: italic;
+}
+
+.lace {
+    border-width: 7px;
+    border-style: solid;
+    border-image: url("/public/assets/img/sitest/lace.png") 8 fill round;
+}
+
+@media (max-width: 800px) {
+    .blog-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "blog-posts blog-posts"
+            "updates updates";
+        width: 98%;
+        height: fit-content;
+    }
+
+    .blog-body {
+        width: 100%;
+    }
+
+    .updates {
+        grid-area: updates;
+        display: block;
+    }
+
+    .blog-posts {
+        grid-area: blog-posts;
+        display: block;
+    }
+}
+
+@font-face {
+    font-family: handy;
+    src: url(https://dl.dropbox.com/s/ga9hf4idu3egjb5/handy00.ttf);
+}
+
+img:hover {
+    cursor: help;
+}
+
+#musicplayer {
+    display: grid;
+    grid-template-columns: 20px auto;
+    align-items: center;
+    width: 100%;
+    font-family: handy;
+    font-size: 15px;
+    color: #FF78BC;
+    line-height: 140%;
+    border: 1px solid #FFB3DE;
+    border-radius: 3px;
+    background: white;
+
+}
+
+#musictitle {
+    font-family: arial;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    width: calc(100% - 10px - 1px);
+    margin-left: calc(10px + 1px);
+}
+
+#musicpixel {
+    width: 1.4em;
+    padding: 5px;
+    position: relative;
+    min-height: 15px;
+    background: white;
+    border-right: 1px solid #FFB3DE;
+}
+
+.overlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease;
+
+    background: pink;
+}
+
+#musicplayer:hover .overlay {
+    opacity: 1;
+    transition: 0.3s ease;
+}
+
+.playpause {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+}
+
+.playpause:hover {
+    cursor: help;
+}
+
+#musicpixel img {
+    display: block;
+}
+
+.marquee {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
