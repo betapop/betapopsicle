@@ -1,3 +1,9 @@
+#bodied {
+    background-image: url("https://files.catbox.moe/95qfim.gif");
+    background-repeat: repeat;
+    background-attachment: scroll;
+}
+
 .blog-main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -11,12 +17,10 @@
 
 .updates {
     grid-area: updates;
-    background-color: aqua;
 }
 
 .blog-posts {
     grid-area: blog-posts;
-    background-color: blue;
 }
 
 .blog-body {
@@ -32,8 +36,8 @@
 .blog-alt {
     border: solid rgb(250, 155, 187) 2px;
     background-color: rgb(255, 249, 250);
-    -webkit-box-shadow: inset 0px 0px 15px 3px rgba(255, 220, 247, 0.77);
-    box-shadow: inset 0px 0px 15px 8px rgba(255, 220, 247, 0.77);
+    -webkit-box-shadow: inset 0px 0px 7px 5px rgba(255, 220, 247, 0.77);
+    box-shadow: inset 0px 0px 7px 5px rgba(255, 220, 247, 0.77);
     width: 98%;
     padding: 1%;
     font-size: 11px;
@@ -67,7 +71,7 @@
 }
 
 #greid-image {
-    height: 750px;
+    height: 635px;
     overflow: scroll;
 }
 
@@ -198,8 +202,8 @@ img:hover {
 /* Style the tab */
 .tab {
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    border: 3px solid rgb(253, 222, 227);
+    background-color: #ffffff;
 }
 
 /* Style the buttons inside the tab */
@@ -216,12 +220,12 @@ img:hover {
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    background-color: #ddd;
+    background-color: rgb(255, 243, 245);
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-    background-color: #ccc;
+    background-color: rgb(255, 243, 245);
 }
 
 /* Style the tab content */
@@ -230,4 +234,51 @@ img:hover {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+}
+
+.card-container {
+    height: 200px;
+    margin-bottom: 2%;
+    perspective: 600;
+    position: relative;
+    width: 150px;
+}
+
+.card {
+    height: 200px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    width: 100%;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card .side {
+    backface-visibility: hidden;
+    border-radius: 6px;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+}
+
+.card .back {
+    background: #fffbfe;
+    color: #cc0070;
+    text-align: center;
+    transform: rotateY(180deg);
+    overflow: scroll;
+}
+
+.checked {
+    color: rgb(255, 138, 196);
+}
+
+.gold-stars {
+    color: #ffceeb;
+    font-size: 11px;
+    margin-bottom: 5px;
 }
