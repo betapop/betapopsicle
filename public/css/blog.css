@@ -71,7 +71,7 @@
 }
 
 #greid-image {
-    height: 635px;
+    height: 600px;
     overflow: scroll;
 }
 
@@ -281,4 +281,28 @@ img:hover {
     color: #ffceeb;
     font-size: 11px;
     margin-bottom: 5px;
+}
+
+a:link {
+    color: rgb(158, 10, 79);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(255, 131, 179);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(255, 172, 204);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgb(255, 131, 179);
+    background-color: transparent;
+    text-decoration: underline;
 }
