@@ -71,7 +71,17 @@
 }
 
 #greid-image {
-    height: 600px;
+    height: 590px;
+    overflow: scroll;
+}
+
+.micro {
+    height: 605px;
+    overflow: scroll;
+}
+
+.blog-focus {
+    height: 660px;
     overflow: scroll;
 }
 
@@ -95,6 +105,14 @@
 
     #greid-image {
         height: auto;
+    }
+
+    .micro {
+        height: 250px;
+    }
+
+    .blog-focus {
+        height: 460px;
     }
 
     .updates {
@@ -232,8 +250,6 @@ img:hover {
 .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
 }
 
 .card-container {
@@ -305,4 +321,106 @@ a:active {
     color: rgb(255, 131, 179);
     background-color: transparent;
     text-decoration: underline;
+}
+
+
+/* CSS */
+.button-14 {
+    background-image: linear-gradient(#f7f8fa, #ffeaf5);
+    border-color: #a85485 #a8537e #ac5073;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    box-shadow: rgba(255, 204, 242, 0.685) 0 1px 0 inset;
+    box-sizing: border-box;
+    color: #0f1111;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-size: 14px;
+    height: 29px;
+    font-size: 13px;
+    outline: 0;
+    overflow: hidden;
+    padding: 0 11px;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+}
+
+.button-14:active {
+    border-bottom-color: #ffeaf5;
+}
+
+.button-14:active:hover {
+    border-bottom-color: #ffeaf5;
+}
+
+.button-14:hover {
+    border-color: #b85287 #8a4163 #7a1659;
+}
+
+.button-14:focus {
+    border-color: #ff88a6;
+    box-shadow: rgba(255, 84, 164, 0.5) 0 0 3px 2px;
+    outline: 0;
+}
+
+.speech-bubble {
+    position: relative;
+    background: #fff9fc;
+    border-radius: .4em;
+    height: fit-content;
+    width: 70%;
+    border: palevioletred solid 2px;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 9px solid transparent;
+    border-right-color: #fff9fc;
+    border-left: 0;
+    border-top: 0;
+    margin-top: -4.5px;
+    margin-left: -9px;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: double palevioletred 4px;
+}
+
+.floated {
+    float: left;
+}
+
+.blog-message {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.blog-nametag {
+    font-size: 16px;
+    font-weight: bold;
+    color: palevioletred;
+    margin-top: 2px;
+}
+
+.blog-msgpad {
+    padding-left: 10px;
+    margin-bottom: 6px;
 }
