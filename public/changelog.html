@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>changelog</title>
-    <script src="assets/js/main.js?nocache=1764367606910"></script>
+    <script src="assets/js/main.js?nocache=1764524145050"></script>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,13 +12,15 @@
     <script src="https://beta.iframe.chat/scripts/main.min.js"></script>
     <script src="lastfm.js" type="module"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/main.css?nocache=1764367606910" />
+    <link rel="stylesheet" href="assets/main.css?nocache=1764524145050" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
     <link href="..//assets/img/temp/favi.png" rel="icon" type="image/x-icon" />
   </head>
-  <body class="changelog-page">
-    <button data-toggle-theme="dark,light" data-act-class="ACTIVECLASS">toggle theme</button>
+  <body class="changelog-page darkBg">
+    <button data-toggle-theme="dark,light" class="shadows" data-act-class="ACTIVECLASS">toggle theme</button>
+    <button data-toggle-theme="xmas" class="shadows" data-act-class="ACTIVECLASS">🎅</button>
+        <input type="button" class="clear" value="no snow ❄️"/>
     <div id="centered">
     <div class="container">
     <div class="Banner" style="background-color: rgb(209, 241, 255); height: 130px;">
@@ -43,7 +45,13 @@
       <hr />
       <ul>
         <li>
-          <p>11/28/25 : added miniblog post and joined a few webrings!</p>
+          <p>
+            11/30/25 : christmas theme + another micro post, and fixed a few
+            backend things
+          </p>
+        </li>
+        <li>
+          <p>11/28/25 : added microblog post and joined a few webrings!</p>
         </li>
         <li>
           <p>
@@ -74,5 +82,61 @@
     </div>
     </div>
     </div>
+    <script src='/public/js/snowfall.jquery.min.js'></script>
+ <script type='text/javascript'>     
+        $(document).ready(function(){
+            $('.collectonme').hide();
+
+            //Start the snow default options you can also make it snow in certain elements, etc.
+            $(document).snowfall({shadow : true, flakeCount:200});
+
+            $(".clear").click(function(){
+                $(document).snowfall('clear'); // How you clear
+            });
+            
+            $(".round").click(function(){
+                document.body.className  = "darkBg";
+                $('.collectonme').hide();
+                $(document).snowfall('clear');
+                $(document).snowfall({round : true, minSize: 5, maxSize:8}); // add rounded
+            });
+            
+            $(".shadows").click(function(){
+                document.body.className  = "lightBg";
+                $('.collectonme').hide();
+                $(document).snowfall('clear');
+                $(document).snowfall({shadow : true, flakeCount:200}); // add shadows
+            });
+
+            $(".roundshadows").click(function(){
+                document.body.className  = "lightBg";
+                $('.collectonme').hide();
+                $(document).snowfall('clear');
+                $(document).snowfall({shadow : true, round : true,  minSize: 5, maxSize:8}); // add shadows
+            });
+            
+            $("#collection").click(function(){
+                $(document).snowfall('clear');
+                document.body.className  = "darkBg";
+                $('.collectonme').show();
+                $(document).snowfall({collection : '.collectonme', flakeCount : 250});
+            });
+            
+            $("#imgbut").click(function(){
+                $('.collectonme').hide();
+                $(document).snowfall('clear');
+                document.body.className  = "darkBg";
+                $(document).snowfall({image :"images/flake.png", minSize: 10, maxSize:32});
+            });
+
+            $("#deviceorientation").click(function(){
+                $(document).snowfall('clear');
+                $('.collectonme').hide();
+                document.body.className  = "darkBg";
+                $(document).snowfall({deviceorientation : true, round : true, minSize: 5, maxSize:8});
+            });
+
+        });
+     </script>
   </body>
 </html>

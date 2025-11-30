@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>betapopsicle</title>
-    <script src="assets/js/main.js?nocache=1764367606910"></script>
+    <script src="assets/js/main.js?nocache=1764524145050"></script>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,13 +12,15 @@
     <script src="https://beta.iframe.chat/scripts/main.min.js"></script>
     <script src="lastfm.js" type="module"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/main.css?nocache=1764367606910" />
+    <link rel="stylesheet" href="assets/main.css?nocache=1764524145050" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
     <link href="..//assets/img/temp/favi.png" rel="icon" type="image/x-icon" />
   </head>
-  <body class="index-page">
-    <button data-toggle-theme="dark,light" data-act-class="ACTIVECLASS">toggle theme</button>
+  <body class="index-page darkBg">
+    <button data-toggle-theme="dark,light" class="shadows" data-act-class="ACTIVECLASS">toggle theme</button>
+    <button data-toggle-theme="xmas" class="shadows" data-act-class="ACTIVECLASS">🎅</button>
+        <input type="button" class="clear" value="no snow ❄️"/>
     <div id="centered">
     <div class="container">
     <div class="Banner" style="background-color: rgb(209, 241, 255); height: 130px;">
@@ -156,21 +158,21 @@
         <div class="nav-header">offsite</div>
         <div
           class="nav-list"
-          onclick="location.href='https://www.youtube.com/@betapopsicle';"
+          onclick="window.open('https://thebetapop.itch.io/');"
         >
           <img src="" class="faviconed" />
-          youtube >>
+          itch.io >>
         </div>
         <div
           class="nav-list"
-          onclick="location.href='https://neocities.org/site/betapopsicle';"
+          onclick="window.open('https://neocities.org/site/betapopsicle');"
         >
           <img src="" class="faviconed" />
           neocities page >>
         </div>
         <div
           class="nav-list"
-          onclick="location.href='https://github.com/betapop/betapopsicle';"
+          onclick="window.open('https://github.com/betapop/betapopsicle');"
         >
           <img src="" class="faviconed" />
           github >>
@@ -332,7 +334,7 @@
           >
             <span style="color: white; font-size: 16px">
               <div id="chgtext" class="textboxed">
-                hey there!~ hopefully you're doing good! im feeling
+                hey there!~ happy holidays! im feeling
                 <a href="https://www.imood.com/users/Betapop"
                   ><img
                     src="https://moods.imood.com/display/uname-Betapop/fg-FFFFFF/trans-1/imood.gif"
@@ -343,13 +345,13 @@
               </div>
               <a
                 href="#"
-                onclick="document.getElementById('chgtext').innerHTML='hi!'; superRemove(); document.getElementById('myImage').classList.add('aistalk');"
+                onclick="document.getElementById('chgtext').innerHTML='hi! i hope you are doing well.'; superRemove(); document.getElementById('myImage').classList.add('aistalk');"
                 >> hi :3</a
               >
               &nbsp; &nbsp;
               <a
                 href="#"
-                onclick="document.getElementById('chgtext').innerHTML='i mean, its pretty weird being in a box... but otherwise pretty good! thank you for asking!'; superRemove(); document.getElementById('myImage').classList.add('aissad')"
+                onclick="document.getElementById('chgtext').innerHTML='excited about the holidays! ... and worried about presents.'; superRemove(); document.getElementById('myImage').classList.add('aissad')"
                 >> how are you?</a
               >&nbsp; &nbsp;
               <script>
@@ -469,7 +471,7 @@
           document.write("<table border=1 ");
           document.write("bordercolor=white class='tdbg'>");
           document.write(
-            "<tr class='tdhead'><td colspan=7><center><font color='white'><div class='header'>" +
+            "<tr class='tdhead'><td colspan=7><center><font><div class='header'>" +
               monthnames[thismonth] +
               " " +
               thisyear +
@@ -634,9 +636,9 @@
   >
     <div class="winheader"><i class="fa-solid fa-star"></i> webrings</div>
     <div
-      style="width: 2fr; height: 95%; background-color: var(--color-secondary)"
+      style="width: 2fr; height: 100%; background-color: var(--color-secondary)"
     >
-      <div style="overflow: scroll; height: 100%; padding: 1%">
+      <div style="overflow: scroll; overflow-x: hidden; height: 100%; padding: 1%">
         <!-- fanlistings -->
         <div class="nav-header">fanlistings!</div>
         <div>
@@ -714,7 +716,7 @@
         </div>
         <div class="nav-header">webrings!</div>
         <!-- webrings -->
-        <div style="padding: 10px">
+        <div class="web-fix">
           <div id="vocaring" class="medium">
             <div id="vocaring"></div>
             <link
@@ -749,6 +751,7 @@
             </div>
             <script src="https://flonkie.github.io/personaring/persona5.setup.js"></script>
             <script src="https://homebrew.cresentri.com/webring.js" data="3DS"></script>
+            
           </center>
           </div>
           <div class="nav-header">cliques!</div>
@@ -1033,6 +1036,7 @@
             src="https://beta.iframe.chat/embed?chat=12852267"
             id="chattable"
           ></iframe>
+        
         </div>
       </div>
     </div>
@@ -1066,5 +1070,61 @@
     </div>
     </div>
     </div>
+    <script src='/public/js/snowfall.jquery.min.js'></script>
+ <script type='text/javascript'>     
+        $(document).ready(function(){
+            $('.collectonme').hide();
+
+            //Start the snow default options you can also make it snow in certain elements, etc.
+            $(document).snowfall({shadow : true, flakeCount:200});
+
+            $(".clear").click(function(){
+                $(document).snowfall('clear'); // How you clear
+            });
+            
+            $(".round").click(function(){
+                document.body.className  = "darkBg";
+                $('.collectonme').hide();
+                $(document).snowfall('clear');
+                $(document).snowfall({round : true, minSize: 5, maxSize:8}); // add rounded
+            });
+            
+            $(".shadows").click(function(){
+                document.body.className  = "lightBg";
+                $('.collectonme').hide();
+                $(document).snowfall('clear');
+                $(document).snowfall({shadow : true, flakeCount:200}); // add shadows
+            });
+
+            $(".roundshadows").click(function(){
+                document.body.className  = "lightBg";
+                $('.collectonme').hide();
+                $(document).snowfall('clear');
+                $(document).snowfall({shadow : true, round : true,  minSize: 5, maxSize:8}); // add shadows
+            });
+            
+            $("#collection").click(function(){
+                $(document).snowfall('clear');
+                document.body.className  = "darkBg";
+                $('.collectonme').show();
+                $(document).snowfall({collection : '.collectonme', flakeCount : 250});
+            });
+            
+            $("#imgbut").click(function(){
+                $('.collectonme').hide();
+                $(document).snowfall('clear');
+                document.body.className  = "darkBg";
+                $(document).snowfall({image :"images/flake.png", minSize: 10, maxSize:32});
+            });
+
+            $("#deviceorientation").click(function(){
+                $(document).snowfall('clear');
+                $('.collectonme').hide();
+                document.body.className  = "darkBg";
+                $(document).snowfall({deviceorientation : true, round : true, minSize: 5, maxSize:8});
+            });
+
+        });
+     </script>
   </body>
 </html>

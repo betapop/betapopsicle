@@ -15,6 +15,7 @@
     "watch": "npx @11ty/eleventy --serve & webpack --watch"
   },
   "dependencies": {
+    "jquery-snowfall": "^1.7.4",
     "tippy.js": "^6.3.7"
   }
 }

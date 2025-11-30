@@ -53,7 +53,7 @@
 .lace {
     border-width: 7px;
     border-style: solid;
-    border-image: url("/public/assets/img/sitest/lace.png") 8 fill round;
+    border-image: url("../assets/img/sitest/lace.png") 8 fill round;
 }
 
 .grid-sizer,
@@ -222,6 +222,7 @@ img:hover {
     overflow: hidden;
     border: 3px solid rgb(253, 222, 227);
     background-color: #ffffff;
+
 }
 
 /* Style the buttons inside the tab */

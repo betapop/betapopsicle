@@ -43,3 +43,32 @@
   --ais-blush: url("../public/assets/img/temp/ais_blush_d.png");
   --ais-sad: url("../public/assets/img/temp/ais_sad_d.png");
 }
+
+[data-theme="xmas"] {
+  --bg-color: #fff;
+  --font-main: #000;
+  --font-secondary: #6d1717;
+  --font-third: #e22626;
+  --font-link: #4c9430;
+  --color-main: repeating-linear-gradient(
+    45deg,
+    #fceed3,
+    #fceed3 10px,
+    #fad7c2 10px,
+    #fad7c2 20px
+  );
+  --color-secondary: rgb(255, 247, 231);
+  --color-third: rgb(255, 212, 162);
+  --color-fade: rgba(255, 255, 255, 0.541);
+  --border-color: #a75353;
+  --warning-color: rgb(255, 251, 231);
+  --bg-image: url("../public/assets/img/temp/bg_c.png");
+  --bimg-1: url("../public/assets/img/temp/banner_1c.png");
+  --favicon-1: url("../public/assets/img/indexi/favi8.gif");
+  --bg-img1: url("../public/assets/img/indexi/bac3.png");
+  --home-image: url("../public/assets/img/temp/home_c.png");
+  --ais-normal: url("../public/assets/img/temp/ais_norm_c.png");
+  --ais-talk: url("../public/assets/img/temp/ais_talk_c.png");
+  --ais-blush: url("../public/assets/img/temp/ais_blush_c.png");
+  --ais-sad: url("../public/assets/img/temp/ais_sad_c.png");
+}

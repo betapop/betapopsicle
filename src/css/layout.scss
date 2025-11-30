@@ -24,7 +24,7 @@
 
 body {
   background-image: var(--bg-image);
-  animation: animate-bg 0.92s infinite linear;
+  animation: animate-bg 20s infinite linear;
   color: var(--font-main);
   transition: all ease-in-out 0.3s;
   font-family: Peaberry;
@@ -40,7 +40,7 @@ body a {
 }
 @keyframes animate-bg {
   100% {
-    background-position: 50px 50px;
+    background-position: 768px 768px;
   }
 }
 
@@ -140,6 +140,10 @@ p {
   width: 20%;
 }
 
+.web-fix {
+  padding: 10px;
+}
+
 /* Screen larger than 600px? 2 column */
 @media (max-width: 800px) {
   .container {
@@ -183,6 +187,13 @@ p {
 
   #mobile-link {
     width: 36%;
+  }
+
+  .web-fix {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 200px;
   }
 
   .neighbors {
@@ -237,11 +248,16 @@ p {
 }
 
 .winheader {
-  background-color: var(--color-main);
+  background: var(--color-main);
   height: fit-content;
   width: 100%;
   border-bottom: 5px solid var(--color-fade);
   font-size: large;
+  color: var(--font-secondary);
+}
+
+.header {
+  background: var(--color-main);
   color: var(--font-secondary);
 }
 
@@ -307,7 +323,7 @@ p {
   padding: 5px;
   margin: 0%;
   font-size: 18px;
-  background-color: var(--color-main);
+  background: var(--color-main);
   color: var(--font-secondary);
 }
 
