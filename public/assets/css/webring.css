@@ -14,7 +14,7 @@
   margin-right: 25%;
 }
 body {
-  background: url("../img/web/city_bg.png") bottom left no-repeat fixed, url("../img/web/bg.png");
+  background: url("../img/web/city_bg.png") bottom left no-repeat fixed, url("../img/web/bg2.png");
 }
 
 @keyframes animate-bg {
