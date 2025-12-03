@@ -1,0 +1,301 @@
+---
+layout: shrine.njk
+title: DELTARUNE
+bodyClass: deltarune-page
+nesting: "../"
+---
+
+<div>
+  <div class="centered-page" style="height: fit-content">
+    <img src="assets/img/delta/dr_logo.png" width="100%" />
+  </div>
+  <div style="background-color: black" class="dr-textbox centered-page">
+    <div id="dr-warning">
+      <img src="assets/img/delta/dr_shield.jpg" width="35px" /> psst... this
+      site is a work in progress!
+    </div>
+    <br />
+    <div class="dr-textbox" style="width: 95%; height: 100px">
+      <div id="noe-img">
+        <img
+          src="assets/img/delta/dr_noelle.png"
+          width="100px"
+          style="image-rendering: pixelated"
+        />
+      </div>
+      <div id="noe-text">
+        * Welcome to my awesome deltarune page! Well, I think it's cool
+        anyways... Feel free to look around! we have <a href="#">resources</a>,
+        <a href="#">secrets</a>,
+        <a href="">or whatever i'm thinking about the game!</a> Enjoy!
+      </div>
+    </div>
+    <br />
+    <div
+      id="dialog"
+      title="Drag me!"
+      class="dr-textbox"
+      style="background-color: black"
+    >
+      <div style="width: 100%; text-align: center; font-size: 18px">CONFIG</div>
+      <ul>
+        <li>
+          Music
+          <span style="float: right; margin-right: 30px">
+            <a id="play-pause-button" class="pause-text"></a
+          ></span>
+        </li>
+        <li>Controls</li>
+        <li>
+          Auto-Run <span style="float: right; margin-right: 30px"> ON</span>
+        </li>
+        <li>
+          Fullscreen <span style="float: right; margin-right: 30px"> OFF</span>
+        </li>
+        <li>Return to Title</li>
+      </ul>
+    </div>
+    <div style="width: 100%; height: 50px">
+      <button id="opener" class="button">Config</button>
+      <div class="dr-plainbox" id="stamp-box" style="float: right">
+        <div class="marquee">
+          <div class="track">
+            <div class="content">
+              &nbsp;<img src="assets/img/delta/dr_stamp1.gif" class="swooned" />
+              <img src="assets/img/delta/dr_stamp2.png" class="swooned" />
+              <img src="assets/img/delta/dr_stamp3.gif" class="swooned" />
+              <img src="assets/img/delta/dr_stamp4.gif" class="swooned" />
+              <img src="assets/img/delta/dr_stamp5.jpg" class="swooned" />
+              <img src="assets/img/delta/dr_stamp6.gif" class="swooned" />
+              <img src="assets/img/delta/dr_stamp7.pnj" class="swooned" />
+              <img src="assets/img/delta/dr_stamp8.gifv" class="swooned" />
+              <img src="assets/img/delta/dr_stamp9.pnj" class="swooned" />
+              <img src="assets/img/delta/dr_stamp10.pnj" class="swooned" />
+              <img src="assets/img/delta/dr_stamp11.pnj" class="swooned" />
+              <img src="assets/img/delta/dr_stamp12.pnj" class="swooned" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div style="line-height: 70%"><br /></div>
+      <div class="dr-plainbox" style="height: 300px"></div>
+      <div style="line-height: 70%"><br /></div>
+      <div class="dr-bottompage">
+        <div class="recruits dr-plainbox">
+          <div class="flex-container">
+            <div class="flex-items">
+              <div style="text-align: center; font-size: 18px">Characters</div>
+              <div
+                style="
+                  width: 100%;
+                  height: 80%;
+                  overflow: auto;
+                  font-size: 14px;
+                "
+                class="tabs"
+              >
+                <ul>
+                  <li>
+                    <div
+                      class="recruited tablinks"
+                      id="defaultOpen"
+                      onclick="openCity(event, 'kris')"
+                    >
+                      Kris
+                      <span
+                        style="float: right; margin-right: 10px; color: #00f500"
+                      >
+                        Recruited!</span
+                      >
+                    </div>
+                  </li>
+                  <li>
+                    <div
+                      class="recruited tablinks"
+                      onclick="openCity(event, 'spamton')"
+                    >
+                      Spamton
+                      <span
+                        style="float: right; margin-right: 10px; color: #00f500"
+                      >
+                        Recruited!</span
+                      >
+                    </div>
+                  </li>
+                  <li>
+                    <div
+                      class="recruited tablinks"
+                      onclick="openCity(event, 'tenna')"
+                    >
+                      Tenna
+                      <span
+                        style="float: right; margin-right: 10px; color: #00f500"
+                      >
+                        Recruited!</span
+                      >
+                    </div>
+                  </li>
+                  <li>
+                    <div
+                      class="recruited tablinks"
+                      onclick="openCity(event, 'weatherduo')"
+                    >
+                      Weather Duo
+                      <span
+                        style="float: right; margin-right: 10px; color: #00f500"
+                      >
+                        Recruited!</span
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex-items">
+              <div id="kris" class="tabcontent">
+                <center>
+                  <div class="chara-sprite"></div>
+                  <div style="font-size: 18px; margin-top: 10px">
+                    Kris Dreemurr
+                  </div>
+                  <div style="font-size: 18px; margin-top: -8px">CHAPTER 1</div>
+                  <div class="chara-textbox">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque eros est, auctor eu ornare in, sagittis vel velit.
+                    Fusce mollis nec augue eget commodo. Duis eleifend egestas
+                    interdum. Sed in augue ac lectus iaculis luctus. Aliquam
+                    orci lacus, dapibus id lectus id, vestibulum varius magna.
+                    Etiam dictum ut justo et tempus. Nullam nec porttitor risus.
+                    Mauris sit amet metus orci.
+                  </div>
+                </center>
+              </div>
+
+              <div id="spamton" class="tabcontent">
+                <center>
+                  <div class="chara-sprite"></div>
+                  <div style="font-size: 18px; margin-top: 10px">
+                    Spamton G. Spamton
+                  </div>
+                  <div style="font-size: 18px; margin-top: -8px">CHAPTER 1</div>
+                  <div class="chara-textbox">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque eros est, auctor eu ornare in, sagittis vel velit.
+                    Fusce mollis nec augue eget commodo. Duis eleifend egestas
+                    interdum. Sed in augue ac lectus iaculis luctus. Aliquam
+                    orci lacus, dapibus id lectus id, vestibulum varius magna.
+                    Etiam dictum ut justo et tempus. Nullam nec porttitor risus.
+                    Mauris sit amet metus orci.
+                  </div>
+                </center>
+              </div>
+
+              <div id="tenna" class="tabcontent">
+                <center>
+                  <div class="chara-sprite"></div>
+                  <div style="font-size: 18px; margin-top: 10px">
+                    Mr. Ant Tenna
+                  </div>
+                  <div style="font-size: 18px; margin-top: -8px">CHAPTER 1</div>
+                  <div class="chara-textbox">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque eros est, auctor eu ornare in, sagittis vel velit.
+                    Fusce mollis nec augue eget commodo. Duis eleifend egestas
+                    interdum. Sed in augue ac lectus iaculis luctus. Aliquam
+                    orci lacus, dapibus id lectus id, vestibulum varius magna.
+                    Etiam dictum ut justo et tempus. Nullam nec porttitor risus.
+                    Mauris sit amet metus orci.
+                  </div>
+                </center>
+              </div>
+
+              <div id="weatherduo" class="tabcontent">
+                <center>
+                  <div class="chara-sprite"></div>
+                  <div style="font-size: 18px; margin-top: 10px">
+                    Lanino & Elnina
+                  </div>
+                  <div style="font-size: 18px; margin-top: -8px">CHAPTER 1</div>
+                  <div class="chara-textbox">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque eros est, auctor eu ornare in, sagittis vel velit.
+                    Fusce mollis nec augue eget commodo. Duis eleifend egestas
+                    interdum. Sed in augue ac lectus iaculis luctus. Aliquam
+                    orci lacus, dapibus id lectus id, vestibulum varius magna.
+                    Etiam dictum ut justo et tempus. Nullam nec porttitor risus.
+                    Mauris sit amet metus orci.
+                  </div>
+                </center>
+              </div>
+              <div id="breaked"><br /></div>
+            </div>
+          </div>
+        </div>
+        <div class="battle dr-plainbox">hi</div>
+      </div>
+      <br /><br />
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+<script>
+  $(function () {
+    $("#dialog").dialog({
+      autoOpen: false,
+      show: {
+        effect: "fade",
+        duration: 500,
+      },
+      hide: {
+        effect: "puff",
+        duration: 1000,
+      },
+    });
+
+    $("#opener").on("click", function () {
+      $("#dialog").dialog("open");
+    });
+  });
+</script>
+<script>
+  var audio = new Audio(
+    "https://file.garden/Zwh0MLf5wyra4Rld/A%20CYBER'S%20WORLD_%204.mp3"
+  );
+
+  $("#play-pause-button").on("click", function () {
+    if ($(this).hasClass("pause-text")) {
+      $(this).removeClass("pause-text");
+      $(this).addClass("play-text");
+      audio.play();
+    } else {
+      $(this).removeClass("play-text");
+      $(this).addClass("pause-text");
+      audio.pause();
+    }
+  });
+
+  audio.onended = function () {
+    $("#play-pause-button").removeClass("play-text");
+    $("#play-pause-button").addClass("pause-text");
+  };
+</script>
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
