@@ -22,9 +22,10 @@
     <link href="{{ nesting }}/assets/img/temp/favi.png" rel="icon" type="image/x-icon" />
   </head>
   <body class="{{ bodyClass }} darkBg">
-    <button data-toggle-theme="dark,light" class="shadows" data-act-class="ACTIVECLASS">toggle theme</button>
-    <button data-toggle-theme="xmas" class="shadows" data-act-class="ACTIVECLASS">🎅</button>
+    <button data-toggle-theme="dark,light" class="clear" data-act-class="ACTIVECLASS">toggle theme</button>
+    <!-- <button data-toggle-theme="xmas" class="shadows" data-act-class="ACTIVECLASS">🎅</button>
         <input type="button" class="clear" value="no snow ❄️"/>
+        -->
     <div id="centered">
     <div class="container">
     <div class="Banner" style="background-color: rgb(209, 241, 255); height: 130px;">
@@ -47,7 +48,7 @@
             $('.collectonme').hide();
 
             //Start the snow default options you can also make it snow in certain elements, etc.
-            $(document).snowfall({shadow : true, flakeCount:200});
+            $(document).snowfall('clear');
 
             $(".clear").click(function(){
                 $(document).snowfall('clear'); // How you clear
