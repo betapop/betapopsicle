@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <title>credits</title>
-    <script src="assets/js/main.js?nocache=1770948445516"></script>
+    <script src="assets/js/main.js?nocache=1771178874427"></script>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="https://beta.iframe.chat/scripts/main.min.js"></script>
     <script src="lastfm.js" type="module"></script>
-    <link
-  rel="stylesheet"
-  href="https://thegreenroom.neocities.org/webrings/tvtimewebring/onionring.css"/>
+    <link rel="stylesheet" href="https://thegreenroom.neocities.org/webrings/tvtimewebring/onionring.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/main.css?nocache=1770948445516" />
+    <link rel="stylesheet" href="assets/main.css?nocache=1771178874427" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
     <link href="..//assets/img/temp/favi.png" rel="icon" type="image/x-icon" />
   </head>
+
   <body class="credits-page darkBg">
     <button data-toggle-theme="dark,light" class="clear" data-act-class="ACTIVECLASS">toggle theme</button>
     <!-- <button data-toggle-theme="xmas" class="shadows" data-act-class="ACTIVECLASS">🎅</button>
         <input type="button" class="clear" value="no snow ❄️"/>
         -->
     <div id="centered">
-    <div class="container">
-    <div class="Banner" style="background-color: rgb(209, 241, 255); height: 130px;">
-      <img src="" id="bannered" style="width: 100%; height: 100%; object-fit: cover;">
-    </div>
-  <div class="main">
-        
+      <div class="container">
+        <div class="Banner" style="background-color: rgb(209, 241, 255); height: 130px;">
+          <img src="" id="bannered" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="main">
+          
 <div
   style="
     border: 5px solid;
@@ -224,71 +225,89 @@
   </div>
 </div>
 
-      <br>
-    <div class="footer">
-    <footer>
-      made by beta | 2025-forever | <a href="https://github.com/betapop/betapopsicle" target="_blank">github</a>
-    </footer>
-    </div>
-    </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src='./js/snowfall.jquery.min.js'></script>
-    <script type='text/javascript'>     
-        $(document).ready(function(){
+          <br>
+        </div>
+      </div>
+      <center>
+        <div class="footer">
+          <footer>
+            made by beta | 2025-forever | <a href="https://github.com/betapop/betapopsicle" target="_blank">github</a>
+          </footer>
+        </div>
+      </center>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src='./js/snowfall.jquery.min.js'></script>
+      <script type='text/javascript'>
+        $(document).ready(function() {
+          $('.collectonme').hide();
+          //Start the snow default options you can also make it snow in certain elements, etc.
+          $(document).snowfall('clear');
+          $(".clear").click(function() {
+            $(document).snowfall('clear'); // How you clear
+          });
+          $(".round").click(function() {
+            document.body.className = "darkBg";
             $('.collectonme').hide();
-
-            //Start the snow default options you can also make it snow in certain elements, etc.
             $(document).snowfall('clear');
-
-            $(".clear").click(function(){
-                $(document).snowfall('clear'); // How you clear
+            $(document).snowfall({
+              round: true,
+              minSize: 5,
+              maxSize: 8
+            }); // add rounded
+          });
+          $(".shadows").click(function() {
+            document.body.className = "lightBg";
+            $('.collectonme').hide();
+            $(document).snowfall('clear');
+            $(document).snowfall({
+              shadow: true,
+              flakeCount: 200
+            }); // add shadows
+          });
+          $(".roundshadows").click(function() {
+            document.body.className = "lightBg";
+            $('.collectonme').hide();
+            $(document).snowfall('clear');
+            $(document).snowfall({
+              shadow: true,
+              round: true,
+              minSize: 5,
+              maxSize: 8
+            }); // add shadows
+          });
+          $("#collection").click(function() {
+            $(document).snowfall('clear');
+            document.body.className = "darkBg";
+            $('.collectonme').show();
+            $(document).snowfall({
+              collection: '.collectonme',
+              flakeCount: 250
             });
-            
-            $(".round").click(function(){
-                document.body.className  = "darkBg";
-                $('.collectonme').hide();
-                $(document).snowfall('clear');
-                $(document).snowfall({round : true, minSize: 5, maxSize:8}); // add rounded
+          });
+          $("#imgbut").click(function() {
+            $('.collectonme').hide();
+            $(document).snowfall('clear');
+            document.body.className = "darkBg";
+            $(document).snowfall({
+              image: "images/flake.png",
+              minSize: 10,
+              maxSize: 32
             });
-            
-            $(".shadows").click(function(){
-                document.body.className  = "lightBg";
-                $('.collectonme').hide();
-                $(document).snowfall('clear');
-                $(document).snowfall({shadow : true, flakeCount:200}); // add shadows
+          });
+          $("#deviceorientation").click(function() {
+            $(document).snowfall('clear');
+            $('.collectonme').hide();
+            document.body.className = "darkBg";
+            $(document).snowfall({
+              deviceorientation: true,
+              round: true,
+              minSize: 5,
+              maxSize: 8
             });
-
-            $(".roundshadows").click(function(){
-                document.body.className  = "lightBg";
-                $('.collectonme').hide();
-                $(document).snowfall('clear');
-                $(document).snowfall({shadow : true, round : true,  minSize: 5, maxSize:8}); // add shadows
-            });
-            
-            $("#collection").click(function(){
-                $(document).snowfall('clear');
-                document.body.className  = "darkBg";
-                $('.collectonme').show();
-                $(document).snowfall({collection : '.collectonme', flakeCount : 250});
-            });
-            
-            $("#imgbut").click(function(){
-                $('.collectonme').hide();
-                $(document).snowfall('clear');
-                document.body.className  = "darkBg";
-                $(document).snowfall({image :"images/flake.png", minSize: 10, maxSize:32});
-            });
-
-            $("#deviceorientation").click(function(){
-                $(document).snowfall('clear');
-                $('.collectonme').hide();
-                document.body.className  = "darkBg";
-                $(document).snowfall({deviceorientation : true, round : true, minSize: 5, maxSize:8});
-            });
-
+          });
         });
-     </script>
-     <script src="./js/fslightbox.js"></script>
+      </script>
+      <script src="./js/fslightbox.js"></script>
   </body>
+
 </html>
