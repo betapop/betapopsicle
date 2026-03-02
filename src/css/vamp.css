@@ -1,0 +1,355 @@
+.vampire-page {
+    background-image: url("../assets/img/vamp/vm_bg.png");
+    animation: animate-bg 20s infinite linear;
+    transition: all ease-in-out 0.3s;
+    font-family: CookieRun;
+}
+
+@font-face {
+    font-family: CookieRun;
+    src: url("../assets/img/vamp/CookieRun Regular.ttf");
+}
+
+@keyframes animate-bg {
+    100% {
+        background-position: 768px 768px;
+    }
+}
+
+.main {
+    width: 40%;
+    height: 1000px;
+}
+
+#vamphap {
+    width: 120px;
+}
+
+.marquee {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 60px;
+    overflow-x: hidden;
+}
+
+.track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 10s linear infinite;
+
+    &:hover {
+        animation-play-state: paused;
+    }
+}
+
+.vamptain {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "guy text";
+    width: 100%;
+}
+
+.guy {
+    grid-area: guy;
+}
+
+.text {
+    grid-area: text;
+}
+
+.vamphalf {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "vhalf1 vhalf2";
+}
+
+.vhalf1 {
+    grid-area: vhalf1;
+}
+
+.vhalf2 {
+    grid-area: vhalf2;
+}
+
+.vamphalf-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "vhalf1 vhalf2";
+}
+
+.vhalf3 {
+    grid-area: vhalf1;
+}
+
+.vhalf4 {
+    grid-area: vhalf2;
+}
+
+.shipb {
+    background-color: #d1304b;
+    border-radius: 10px;
+    border: 3px #380107 solid;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-26%);
+    }
+}
+
+.vm-box {
+    background-color: #b7112d;
+    border: 2px solid;
+    color: #5e0610;
+}
+
+@media (min-width: 200px) and (max-width: 600px) {
+    .main {
+            width: 95%;
+        }
+    
+    .vamptain {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px;
+        grid-template-areas:
+            "text";
+        width: 100%;
+    }
+
+    #vamphap {
+        width: 0px;
+        display: none;
+    }
+
+    .guy {
+        display: none;
+    }
+
+    .text {
+        grid-area: text;
+        width: 100%;
+    }
+
+    .vamphalf {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "vhalf1";
+    }
+
+    .vhalf2 {
+        display: none;
+    }
+
+    .vamphalf-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px;
+        grid-template-areas:
+            "vhalf2";
+    }
+
+    .vhalf3 {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+    .main {
+            width: 65%;
+        }
+    .vamphalf {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "vhalf1";
+    }
+
+    .vhalf2 {
+        display: none;
+    }
+}
+
+#glenplayer02 {
+    position: relative;
+    top: 0px;
+    left: 5px;
+    display: flex;
+    z-index: 99;
+}
+
+#glenplayer02 a {
+    text-decoration: none;
+}
+
+#glenplayer02>div {
+    align-self: center;
+    -webkit-align-self: center;
+}
+
+.music-controls {
+    user-select: none;
+    -webkit-user-select: none;
+    width: 13px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.playy,
+.pausee {
+    color: #5e0610;
+}
+
+/* color of play & pause buttons */
+
+.pausee {
+    display: none;
+}
+
+.sonata {
+    margin-left: 10px;
+    font-family: CookieRun;
+    font-size: 14px;
+    color: #5e0610;
+    font-weight: bold;
+    /* color of music note symbol */
+}
+
+.labeltext {
+    margin-left: 0px;
+    position: relative;
+    bottom: 10px;
+    font-family: CookieRun;
+    font-size: 14px;
+    color: #5e0610;
+    font-weight: bold;
+    /* color of song title */
+}
+
+a {
+    color: #c22b2b;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    outline: none;
+    padding: 6px 6px;
+    transition: 0.3s;
+    font-size: 17px;
+    font-family: CookieRun;
+}
+
+.w-spark {
+    background-color: #fcd555;
+    border: 2px #833000 solid;
+}
+.w-both {
+    background-color: #b7112d;
+    border: 2px #5e0610 solid;
+}
+
+.w-herb {
+    background-color: #a2c111;
+    border: 2px #0c4900 solid;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #c365d8;
+    border: 2px #400049 solid;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.skillbar {
+    background-color: rgb(192, 192, 192);
+    width: 100%;
+    border-radius: 7px;
+    border: #400049 3px solid;
+    float: left;
+    height: 20px;
+}
+
+.h-skill {
+    background-color: #a2c111;
+    border-right: #0c4900 2px solid;
+    text-align: left;
+    color: white;
+    height: 20px;
+    float: left;
+}
+
+.s-skill {
+    background-color: #fcd555;
+    border-right: #833000 2px solid;
+    text-align: left;
+    color: white;
+    height: 20px;
+    float: left;
+}
+
+.v-skill {
+    background-color: #744ace;
+    border-right: #5e0610 2px solid;
+    text-align: left;
+    color: white;
+    height: 20px;
+    float: left;
+}
+
+.s-half {
+    width: 50%;
+}
+
+.s-quarter {
+    width: 25%;
+}
+
+.s-sev5 {
+    width: 75%;
+}
+
+.s-none {
+    width: 10%;
+}
+
+.s-all {
+    width: 95%;
+}
