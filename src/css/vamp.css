@@ -121,7 +121,7 @@
     color: #5e0610;
 }
 
-@media (min-width: 200px) and (max-width: 600px) {
+@media (min-width: 200px) and (max-width: 800px) {
     .main {
             width: 95%;
         }
@@ -177,7 +177,7 @@
     }
 }
 
-@media (min-width: 600px) and (max-width: 1200px) {
+@media (min-width: 800px) and (max-width: 1300px) {
     .main {
             width: 65%;
         }

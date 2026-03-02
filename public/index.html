@@ -3,7 +3,7 @@
 
   <head>
     <title>betapopsicle</title>
-    <script src="assets/js/main.js?nocache=1772471309117"></script>
+    <script src="assets/js/main.js?nocache=1772493850874"></script>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,12 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
-    <script src="https://beta.iframe.chat/scripts/main.min.js"></script>
     <script src="lastfm.js" type="module"></script>
     <link rel="stylesheet" href="https://thegreenroom.neocities.org/webrings/tvtimewebring/onionring.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/main.css?nocache=1772471309117" />
+    <link rel="stylesheet" href="assets/main.css?nocache=1772493850874" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
     <link href="..//assets/img/temp/favi.png" rel="icon" type="image/x-icon" />
@@ -29,8 +28,8 @@
         -->
     <div id="centered">
       <div class="container">
-        <div class="Banner" style="background-color: rgb(209, 241, 255); height: 130px;">
-          <img src="" id="bannered" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="Banner" style="height: 130px; border: 3px solid var(--border-color); border-radius: 30px 30px 0px 0px; box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.164);">
+          <img src="" id="bannered" style="width: 100%; height: 100%; object-fit: cover; border-radius: 30px 30px 0px 0px;">
         </div>
         <div class="main">
           
@@ -57,33 +56,45 @@
 <div class="container2">
   <!-- intro welcome -->
   <div
-    class="intro"
+    class="intro zoom"
     style="
-      border: 5px solid;
+      border: 5px double;
       border-color: var(--border-color);
-      border-radius: 10px 10px 10px 10px;
+      border-radius: 10px 6px 10px 6px;
       overflow: hidden;
     "
   >
-    <div class="winheader"><i class="fa-solid fa-star"></i> intro</div>
+    <div class="winheader">
+      <div class="headertexted">
+      <div class="head-text"><i class="fa-solid fa-star"></i>intro</div>
+      <div class="head-x">
+        <span class="x-colored">
+          <b>X</b>
+        </span>
+      </div>
+    </div>
+    </div>
     <div
       style="width: 2fr; height: 90%; background-color: var(--color-secondary)"
     >
       <div style="overflow: scroll; height: 100%; padding: 0%" id="intror">
         <div style="width: 18%; height: 95%; float: left" class="hiddenNOW">
-          <img src="assets/img/temp/kitty.gif" width="110px" />
+          <img src="assets/img/temp/kitty2.gif" width="110px" />
         </div>
         <div
-          style="float: right; height: 95%; overflow: scroll"
+          style="float: right; height: 95%; overflow: scroll;"
           id="mobile-link"
         >
         <!-- quick links -->
-          <div class="nav-header">quick links</div>
+          <div class="nav-header">old sites</div>
           <div class="small-list">
-            <a href="./changelog.html">changelog</a>
+            <a href="https://betabagels.neocities.org/" target="_blank">betabagels</a>
           </div>
           <div class="small-list">
-            <a href="./advcal.html">advent calendar</a>
+            <a href="https://beta3ds.neocities.org/" target="_blank">beta3ds</a>
+          </div>
+          <div class="small-list">
+            <a href="https://betazz.neocities.org/" target="_blank">betazz</a>
           </div>
           <!-- links end -->
         </div>
@@ -103,7 +114,7 @@
           </span>
           <br />
           <div style="padding: 1%">
-            hii! im beta, and welcome to my lil site... this is now my 5th site
+            hii! im beta, and welcome to my lil site... this is now my 4th site
             or something??? lol. anyways i poured a bunch of love into this one
             so please have fun! next to this are some quick links if you want to
             find something specific. ok byee
@@ -119,81 +130,88 @@
   </div>
   <!-- navigation -->
   <div
-    class="nav"
+    class="nav zoom"
     style="
-      border: 5px solid;
+      border: 5px double;
       border-color: var(--border-color);
-      border-radius: 10px 10px 10px 10px;
+      border-radius: 10px 6px 10px 6px;
       overflow: hidden;
     "
   >
-    <div class="winheader"><i class="fa-solid fa-star"></i>nav</div>
+    <div class="winheader"><div class="headertexted">
+      <div class="head-text"><i class="fa-solid fa-star"></i>nav</div>
+      <div class="head-x">
+        <span class="x-colored">
+          <b>X</b>
+        </span>
+      </div>
+    </div></div>
     <div
       style="width: 2fr; height: 93%; background-color: var(--color-secondary)"
     >
       <div style="overflow: scroll; height: 100%; padding: 1%">
         <!-- personal -->
         <div class="nav-header">personal</div>
-        <div class="nav-list" onclick="location.href='./about.html';">
+        <div class="nav-list eff" onclick="location.href='./about.html';">
           <img src="" class="faviconed" />
-          abt me >>
+          abt me
         </div>
-        <div class="nav-list" onclick="location.href='./blog.html';">
+        <div class="nav-list eff" onclick="location.href='./blog.html';">
           <img src="" class="faviconed" />
-          blog >>
+          blog
         </div>
-        <div class="nav-list" onclick="location.href='./art.html';">
+        <div class="nav-list eff" onclick="location.href='./art.html';">
           <img src="" class="faviconed" />
-          art >>
+          art
         </div>
-        <div class="nav-list" onclick="window.open('https://betapop.github.io/shiftpedia/');">
+        <div class="nav-list eff" onclick="window.open('https://betapop.github.io/shiftpedia/');">
           <img src="" class="faviconed" />
-          characters >>
+          characters
         </div>
-        <div class="nav-list" onclick="location.href='./shrines.html';">
+        <div class="nav-list eff" onclick="location.href='./shrines.html';">
           <img src="" class="faviconed" />
-          shrines >>
+          shrines
         </div>
         <!-- resources -->
         <div class="nav-header">for u</div>
-        <div class="nav-list" onclick="location.href='#';">
+        <div class="nav-list eff" onclick="location.href='#';">
           <img src="" class="faviconed" />
-          quiz & cliques >>
+          quiz & cliques
         </div>
-        <div class="nav-list" onclick="location.href='./bookmarks.html';">
+        <div class="nav-list eff" onclick="location.href='./bookmarks.html';">
           <img src="" class="faviconed" />
-          bookmarks >>
+          bookmarks
         </div>
-        <div class="nav-list" onclick="location.href='./thiefwebring.html';">
+        <div class="nav-list eff" onclick="location.href='./thiefwebring.html';">
           <img src="" class="faviconed" />
-          webring >>
+          webring
         </div>
-        <div class="nav-list" onclick="location.href='./credits.html';">
+        <div class="nav-list eff" onclick="location.href='./credits.html';">
           <img src="" class="faviconed" />
-          credits >>
+          credits
         </div>
         <!-- offsite -->
         <div class="nav-header">offsite</div>
         <div
-          class="nav-list"
+          class="nav-list eff"
           onclick="window.open('https://thebetapop.itch.io/');"
         >
           <img src="" class="faviconed" />
-          itch.io >>
+          itch.io
         </div>
         <div
-          class="nav-list"
+          class="nav-list eff"
           onclick="window.open('https://neocities.org/site/betapopsicle');"
         >
           <img src="" class="faviconed" />
-          neocities page >>
+          neocities page
         </div>
         <div
-          class="nav-list"
+          class="nav-list eff"
           onclick="window.open('https://github.com/betapop/betapopsicle');"
         >
           <img src="" class="faviconed" />
-          github >>
+          github
         </div>
       </div>
     </div>
@@ -201,16 +219,23 @@
   </div>
   <!-- stamps & more -->
   <div
-    class="fun-scroll"
+    class="fun-scroll zoom"
     style="
-      border: 5px solid;
+      border: 5px double;
       border-color: var(--border-color);
-      border-radius: 10px 10px 10px 10px;
+      border-radius: 10px 6px 10px 6px;
       overflow: hidden;
     "
   >
     <div class="winheader">
-      <i class="fa-solid fa-star"></i> stamps and things
+      <div class="headertexted">
+      <div class="head-text"><i class="fa-solid fa-star"></i>stamps and things</div>
+      <div class="head-x">
+        <span class="x-colored">
+          <b>X</b>
+        </span>
+      </div>
+    </div>
     </div>
     <div
       style="width: 2fr; height: 85%; background-color: var(--color-secondary)"
@@ -277,11 +302,11 @@
   </div>
   <!-- aislin box! -->
   <div
-    class="statuss"
+    class="statuss zoom"
     style="
-      border: 5px solid;
+      border: 5px double;
       border-color: var(--border-color);
-      border-radius: 10px 10px 10px 10px;
+      border-radius: 10px 6px 10px 6px;
       overflow: hidden;
     "
   >
@@ -293,7 +318,14 @@
       "
     >
       <div class="winheader">
-        <i class="fa-solid fa-star"></i> talk to aislin!
+        <div class="headertexted">
+      <div class="head-text"><i class="fa-solid fa-star"></i>talk to aislin!</div>
+      <div class="head-x">
+        <span class="x-colored">
+          <b>X</b>
+        </span>
+      </div>
+    </div>
       </div>
       <div
         style="overflow: scroll; height: 100%; padding: 1%; position: relative"
@@ -403,15 +435,22 @@
   </div>
   <!-- navlink -->
   <div
-    class="silly-space"
+    class="silly-space zoom"
     style="
-      border: 5px solid;
+      border: 5px double;
       border-color: var(--border-color);
-      border-radius: 10px 10px 10px 10px;
+      border-radius: 10px 6px 10px 6px;
       overflow: hidden;
     "
   >
-    <div class="winheader"><i class="fa-solid fa-star"></i> go places!!</div>
+    <div class="winheader"><div class="headertexted">
+      <div class="head-text"><i class="fa-solid fa-star"></i>go places!</div>
+      <div class="head-x">
+        <span class="x-colored">
+          <b>X</b>
+        </span>
+      </div>
+    </div></div>
     <div
       style="width: 2fr; height: 90%; background-color: var(--color-secondary)"
     >
@@ -419,7 +458,6 @@
         style="
           overflow: scroll;
           height: 100%;
-          padding: 1%;
           align-content: center;
         "
       >
@@ -436,19 +474,26 @@
   </div>
   <!-- calendar -->
   <div
-    class="cal"
+    class="cal zoom"
     style="
-      border: 5px solid;
+      border: 5px double;
       border-color: var(--border-color);
-      border-radius: 10px 10px 10px 10px;
+      border-radius: 10px 6px 10px 6px;
       overflow: hidden;
     "
   >
-    <div class="winheader"><i class="fa-solid fa-star"></i> time...</div>
+    <div class="winheader"><div class="headertexted">
+      <div class="head-text"><i class="fa-solid fa-star"></i>time...</div>
+      <div class="head-x">
+        <span class="x-colored">
+          <b>X</b>
+        </span>
+      </div>
+    </div></div>
     <div
       style="width: 2fr; height: 90%; background-color: var(--color-secondary)"
     >
-      <div style="overflow: auto; height: 100%; padding: 2%; font-size: 14px">
+      <div style="overflow: auto; height: 100%; font-size: 14px">
         <script language="JavaScript">
           monthnames = new Array(
             "January",
@@ -503,7 +548,7 @@
           while (startspaces > 7) startspaces -= 7;
           startspaces = thisday - startspaces + 1;
           if (startspaces < 0) startspaces += 7;
-          document.write("<table border=1 ");
+          document.write("<table border=1 width=100%");
           document.write("bordercolor=white class='tdbg'>");
           document.write(
             "<tr class='tdhead'><td colspan=7><center><font><div class='header'>" +
@@ -576,15 +621,22 @@
   </div>
   <!-- random stuff / fun -->
   <div
-    class="fun"
+    class="fun zoom"
     style="
-      border: 5px solid;
+      border: 5px double;
       border-color: var(--border-color);
-      border-radius: 10px 10px 10px 10px;
+      border-radius: 10px 6px 10px 6px;
       overflow: hidden;
     "
   >
-    <div class="winheader"><i class="fa-solid fa-star"></i> fun</div>
+    <div class="winheader"><div class="headertexted">
+      <div class="head-text"><i class="fa-solid fa-star"></i>fun</div>
+      <div class="head-x">
+        <span class="x-colored">
+          <b>X</b>
+        </span>
+      </div>
+    </div></div>
     <div
       style="width: 2fr; height: 95%; background-color: var(--color-secondary)"
     >
@@ -667,15 +719,22 @@
   </div>
   <!-- webrings -->
   <div
-    class="webrings"
+    class="webrings zoom"
     style="
-      border: 5px solid;
+      border: 5px double;
       border-color: var(--border-color);
-      border-radius: 10px 10px 10px 10px;
+      border-radius: 10px 6px 10px 6px;
       overflow: hidden;
     "
   >
-    <div class="winheader"><i class="fa-solid fa-star"></i> webrings</div>
+    <div class="winheader"><div class="headertexted">
+      <div class="head-text"><i class="fa-solid fa-star"></i>webrings and co.</div>
+      <div class="head-x">
+        <span class="x-colored">
+          <b>X</b>
+        </span>
+      </div>
+    </div></div>
     <div
       style="width: 2fr; height: 100%; background-color: var(--color-secondary)"
     >
@@ -977,15 +1036,22 @@
     </div>
     <!-- neighbors / buttons -->
     <div
-      class="neighbors"
+      class="neighbors zoom"
       style="
-        border: 5px solid;
+        border: 5px double;
         border-color: var(--border-color);
-        border-radius: 10px 10px 10px 10px;
+        border-radius: 10px 6px 10px 6px;
         overflow: hidden;
       "
     >
-      <div class="winheader"><i class="fa-solid fa-star"></i> neighbors</div>
+      <div class="winheader"><div class="headertexted">
+      <div class="head-text"><i class="fa-solid fa-star"></i>neighbors</div>
+      <div class="head-x">
+        <span class="x-colored">
+          <b>X</b>
+        </span>
+      </div>
+    </div></div>
       <div
         style="width: 2fr; background-color: var(--color-secondary)"
         class="fullguy"
@@ -1111,11 +1177,11 @@
     </div>
     <!-- status -->
     <div
-      class="free-space"
+      class="free-space zoom"
       style="
-        border: 5px solid;
+        border: 5px double;
         border-color: var(--border-color);
-        border-radius: 10px 10px 10px 10px;
+        border-radius: 10px 6px 10px 6px;
         overflow: hidden;
       "
     >
@@ -1175,16 +1241,23 @@
     </div>
     <!-- chat-->
     <div
-      class="free-erspace"
+      class="free-erspace zoom"
       style="
-        border: 5px solid;
+        border: 5px double;
         border-color: var(--border-color);
-        border-radius: 10px 10px 10px 10px;
+        border-radius: 10px 6px 10px 6px;
         overflow: hidden;
       "
     >
       <div class="winheader">
-        <i class="fa-solid fa-star"></i> chat with us!
+        <div class="headertexted">
+      <div class="head-text"><i class="fa-solid fa-star"></i>misc.</div>
+      <div class="head-x">
+        <span class="x-colored">
+          <b>X</b>
+        </span>
+      </div>
+    </div>
       </div>
       <div
         style="
@@ -1194,17 +1267,22 @@
         "
       >
         <div style="overflow: scroll; height: 100%; padding: 1%">
-          <script>
-            chattable.initialize({
-              theme: "glass",
-            });
-          </script>
-          <iframe
-            style="width: 99%; height: 90%; border: 0"
-            src="https://beta.iframe.chat/embed?chat=12852267"
-            id="chattable"
-          ></iframe>
-        
+          <div class="nav-list eff">
+            <img src="" class="faviconed" />
+            <a href="https://betapopsicle.atabook.org/">sign my guestbook!</a>
+          </div>
+          <div class="nav-list eff">
+            <img src="" class="faviconed" />
+            <a href="./changelog.html">changelog</a>
+          </div>
+          <div class="nav-list eff">
+            <img src="" class="faviconed" />
+            <a href="./advcal.html">(now archived) advent calendar</a>
+          </div>
+          <div class="small-list">
+            <!-- playing -->
+             recent page: <a href="./bite.html">vamp cookie shrine</a>
+          </div>
         </div>
       </div>
     </div>

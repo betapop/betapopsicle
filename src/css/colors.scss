@@ -1,15 +1,22 @@
 :root {
   --bg-color: #fff;
   --font-main: #000;
+  --color-light: #82d1ff;
   --font-secondary: #fff;
   --font-third: #27b0ff;
   --font-link: #388ed4;
-  --color-main: #b2f0ff;
+  --color-main: linear-gradient(
+    to bottom,
+    #dcfaff 0%,
+    #b2f0ff 43%,
+    #6fc5ff 100%
+  );
   --color-secondary: rgb(231, 255, 255);
-  --color-third: rgb(0, 217, 255);
+  --color-third: #a8eeff;
   --color-fade: rgba(255, 255, 255, 0.541);
-  --border-color: #85d1f5;
+  --border-color: #47b9ff;
   --warning-color: rgb(231, 255, 255);
+  --color-grade: linear-gradient(to bottom, #ffffff 0%, #d2f9ff 100%);
   --bg-image: url("../public/assets/img/temp/bg_l.png");
   --bimg-1: url("../public/assets/img/temp/banner1_l.png");
   --favicon-1: url("../public/assets/img/indexi/favi1.gif");
@@ -25,14 +32,21 @@
 [data-theme="dark"] {
   --bg-color: #000;
   --font-main: #fff;
+  --color-light: #8549b6;
   --font-secondary: #fff;
   --font-third: #fff;
   --font-link: #dfb7ff;
-  --color-main: #000;
+  --color-main: linear-gradient(
+    to bottom,
+    #aa78a5 0%,
+    #250055 43%,
+    #000000 100%
+  );
   --color-secondary: #0e0e0e;
-  --color-third: rgb(58, 9, 122);
+  --color-third: rgb(90, 9, 122);
   --color-fade: rgba(105, 68, 173, 0.603);
   --border-color: #250055;
+  --color-grade: linear-gradient(to bottom, #ffffff 0%, #f2d2ff 100%);
   --warning-color: rgba(105, 68, 173, 0.603);
   --bg-image: url("../public/assets/img/temp/bg_d.png");
   --bimg-1: url("../public/assets/img/temp/banner1_d.png");
@@ -62,6 +76,7 @@
   --color-secondary: rgb(255, 247, 231);
   --color-third: rgb(255, 212, 162);
   --color-fade: rgba(255, 255, 255, 0.541);
+  --color-grade: linear-gradient(to bottom, #ffffff 0%, #ffe3d2 100%);
   --border-color: #a75353;
   --warning-color: rgb(255, 251, 231);
   --bg-image: url("../public/assets/img/temp/bg_c.png");
