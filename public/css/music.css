@@ -1,0 +1,114 @@
+@font-face {
+    font-family: Peaberry;
+    src: url("/assets/BadComic-Regular.ttf");
+}
+
+#bodied {
+    background-image: url("/assets/img/sitest/move_heart.gif");
+    background-repeat: repeat;
+    background-attachment: scroll;
+    transition: all ease-in-out 0.3s;
+    font-family: Peaberry;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "nameskip"
+        "musicly";
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: larger;
+    
+}
+
+#nameimg {
+    width: 500px;
+    height: 200px;
+    display: block;
+        margin: auto;
+}
+
+.nameskip {
+    grid-area: nameskip;
+    text-align: center;
+    height: fit-content;
+}
+
+.musicly {
+    grid-area: musicly;
+    height: fit-content;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 23px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "song1 song2 song3";
+    font-size: medium;
+}
+
+.song1 {
+    grid-area: song1;
+}
+
+.song2 {
+    grid-area: song2;
+}
+
+.song3 {
+    grid-area: song3;
+}
+
+.coolbox {
+    border: dashed rgb(205, 73, 209) 3px;
+    background-color: #ffabdc;
+    padding: 10px;
+    transition: transform 0.2s;
+    margin-bottom: 25px;
+}
+
+.coolbox:hover {
+    transform: scale(1.03);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+@media (max-width: 800px) {
+    .nameskip {
+        width: 100%;
+    }
+
+    .container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .musicly {
+        width: 100%;
+    }
+
+    #nameimg {
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    .container2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 23px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "song1"
+            "song2"
+            "song3";
+        font-size: medium;
+    }
+}
