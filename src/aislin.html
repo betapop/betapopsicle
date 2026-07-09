@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Flex layout</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+
+    <style>
+      .alert {
+        padding: 20px;
+      }
+
+      .closebtn {
+        margin-left: 15px;
+        color: rgb(172, 5, 5);
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .notepaper {
+        color: black;
+        padding: 12px 2px 10px 18px;
+        border-image-slice: 20 11 20 19 fill;
+        border-image-width: 20px 11px 20px 19px;
+        border-image-repeat: repeat round;
+        border-style: solid;
+        border-color: transparent;
+        image-rendering: pixelated;
+        border-image-source: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAABoCAMAAABvw+gRAAAALVBMVEUAAADu7u6qqqqZmZmIiIh3d3e7u7vMzMz////d3d1mZmZVVVX+/v7v7+/w8PCGxkBUAAAAAXRSTlMAQObYZgAAA+lJREFUeNqNWAmC2zAINKeM4u3/n9tYK2yTcdzSY3UwGhAINlkuQiyibzE1MxbTfcbMsq/zAmLmjda30HqVoKAIFzWVqq9TowAo50TRxPQK8PVB6JfN9YT0+KJaOZtqYQAXQMjzArRq01coif1SXJZAtW6RciLy5EqFh/ySyPosiTwQ1nLtmxN0DmIgwCS6mJIbubUHnv/LqASdiHLoQ2j6noGw+yTTj3koM2fiIQsiVjJ+i9Izx8gsN7N4o0c4Wf9l1RSLHTDwbRhU4k3HSuiCorfBe0A8Jw1JvnF1nwD3p3dC+qtvlOOS+/gGaGhxXOGvuCsOlOPGuxmHV8YqVFyGSEZBpM5TbpFC7n59IoTZTnAyJvVAmJSTKgBhmlcF5xXi6oecm43biiyfVvWW88ZhIQ6xq9y6+GG/Wx8t4VAgoBgczq4iKpwFUqAjlPvF3DXHayB8UdaXpc/G0KoSlUlyWHPhNq3iewfynwyCNobTKH+qqUPNKCij+VgYqFSfMWUT8+IrkBHtCIYw05xuP7f1yhyOTNn+lMeViO6g/pCP80XNtTQuviETIQ/PCEOSHA9JXnED0dNMINmgWtCMR3I24ZbocVVo5ERMCDfrTaFElVnIbpVTRKwrL8NEPVQ2uOGs1Natt2h9pmIrRmHnBOHTig0K3PTDupkdWB70J0ktPiOvwj1iGIUtKmnoEvPe5jzc8p0frg8a+shdaxkC526unIdu23Qd8or5mDX104afP9tHRIhmtjdaUQhvl2o3oMsrqBGkGnmdl0PQyE4OrHD81MaAZlpFX5Q2RPF8g8X+vF3wPa16HYRdXz5hebvFtUTQK46sZLG1eF6Js7bzi47GwOyQVal/7R+NTTJ15fJsf2oVzW5QxbnWROiDz4ihXSMryyLcTbuqTYSu9UVVGuKzIgY7eA427Rx89nNpHsqoRReK0aPOnTem1tMNKIiXQYL0xRGqiEVLJa4UKJmJqV9GQEHDj9o/qOps0KUGggnduO2cNN+5ciqTd/7wfINy/UZ4m83Yhd27zJ2E/FTmgciayCNJMuYglAiPufDaEdDkAKULv4K5RfMJWASqCtSShaf2RBR9EDs12fGzAXKQ5jOSFlK/PrgH0tBqHDQyFykQxTsgScO1e5RESlvq5ygG5hsfKBECjQ9Ldpk3KRyghGvB+XsJnI7jk6Ond9ipsOa77xztyaRKHeJLeYQAADfU74IWqUD0eUgbiOkI3Z9dQOQzrfReAx0Jc/gu6vkLE1b4NgqOLUuhgp9s8NGdnE1tOaXrqRr3WFZdipixRwRFEBGtFOuYrWPWWNh0ARFRURFR3Uc2f8r47yD4C5YqfMcto41mAAAAAElFTkSuQmCC");
+      }
+
+      #floater {
+        -webkit-animation: mover 1s infinite alternate;
+        animation: mover 2s infinite alternate;
+      }
+
+      @-webkit-keyframes mover {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-15px);
+        }
+      }
+      @keyframes mover {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-15px);
+        }
+      }
+
+      :root {
+        /* Fonts */
+        --bodyfont: arial;
+        --headerfont: comic sans ms;
+
+        /* Main colors */
+        --background: #e49250; /* Page background */
+        --color: #2f1c15;
+        --block: #ffeaca28; /* Background color for the grid blocks in the content */
+
+        --link: #d16e1d;
+        --linkhover: #e49250;
+
+        --h1: #2f1c15;
+        --h2: #2f1c15;
+        --h3: #2f1c15;
+        --h4: #2f1c15;
+
+        /* Sidebar colors */
+
+        --sidebarcolor: #2f1c15;
+        --title: #cc6c1d;
+        --sidebarlink: #d16e1d;
+        --sidebarlinkhover: #e49250;
+
+        /* Menu colors */
+        --menubg: #2f1c15;
+        --menucolor: #e49250;
+        --menubghover: #e49250;
+        --menucolorhover: #2f1c15;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Main body styling */
+      body {
+        background-color: var(--background);
+        background-attachment: fixed;
+        font: 1rem sans-serif;
+        color: var(--color);
+      }
+
+      /* Rounded corners - feel free to get rid of this or change it */
+
+      main section,
+      #sidebar-content,
+      #main-footer {
+        border-radius: 5px;
+      }
+
+      /* Sidebar styling */
+
+      #sidebar {
+        color: black;
+        padding: 12px 2px 10px 18px;
+        border-image-slice: 20 11 20 19 fill;
+        border-image-width: 20px 11px 20px 19px;
+        border-image-repeat: repeat round;
+        border-style: solid;
+        border-color: transparent;
+        image-rendering: pixelated;
+        border-image-source: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAABoCAMAAABvw+gRAAAALVBMVEUAAADu7u6qqqqZmZmIiIh3d3e7u7vMzMz////d3d1mZmZVVVX+/v7v7+/w8PCGxkBUAAAAAXRSTlMAQObYZgAAA+lJREFUeNqNWAmC2zAINKeM4u3/n9tYK2yTcdzSY3UwGhAINlkuQiyibzE1MxbTfcbMsq/zAmLmjda30HqVoKAIFzWVqq9TowAo50TRxPQK8PVB6JfN9YT0+KJaOZtqYQAXQMjzArRq01coif1SXJZAtW6RciLy5EqFh/ySyPosiTwQ1nLtmxN0DmIgwCS6mJIbubUHnv/LqASdiHLoQ2j6noGw+yTTj3koM2fiIQsiVjJ+i9Izx8gsN7N4o0c4Wf9l1RSLHTDwbRhU4k3HSuiCorfBe0A8Jw1JvnF1nwD3p3dC+qtvlOOS+/gGaGhxXOGvuCsOlOPGuxmHV8YqVFyGSEZBpM5TbpFC7n59IoTZTnAyJvVAmJSTKgBhmlcF5xXi6oecm43biiyfVvWW88ZhIQ6xq9y6+GG/Wx8t4VAgoBgczq4iKpwFUqAjlPvF3DXHayB8UdaXpc/G0KoSlUlyWHPhNq3iewfynwyCNobTKH+qqUPNKCij+VgYqFSfMWUT8+IrkBHtCIYw05xuP7f1yhyOTNn+lMeViO6g/pCP80XNtTQuviETIQ/PCEOSHA9JXnED0dNMINmgWtCMR3I24ZbocVVo5ERMCDfrTaFElVnIbpVTRKwrL8NEPVQ2uOGs1Natt2h9pmIrRmHnBOHTig0K3PTDupkdWB70J0ktPiOvwj1iGIUtKmnoEvPe5jzc8p0frg8a+shdaxkC526unIdu23Qd8or5mDX104afP9tHRIhmtjdaUQhvl2o3oMsrqBGkGnmdl0PQyE4OrHD81MaAZlpFX5Q2RPF8g8X+vF3wPa16HYRdXz5hebvFtUTQK46sZLG1eF6Js7bzi47GwOyQVal/7R+NTTJ15fJsf2oVzW5QxbnWROiDz4ihXSMryyLcTbuqTYSu9UVVGuKzIgY7eA427Rx89nNpHsqoRReK0aPOnTem1tMNKIiXQYL0xRGqiEVLJa4UKJmJqV9GQEHDj9o/qOps0KUGggnduO2cNN+5ciqTd/7wfINy/UZ4m83Yhd27zJ2E/FTmgciayCNJMuYglAiPufDaEdDkAKULv4K5RfMJWASqCtSShaf2RBR9EDs12fGzAXKQ5jOSFlK/PrgH0tBqHDQyFykQxTsgScO1e5RESlvq5ygG5hsfKBECjQ9Ldpk3KRyghGvB+XsJnI7jk6Ond9ipsOa77xztyaRKHeJLeYQAADfU74IWqUD0eUgbiOkI3Z9dQOQzrfReAx0Jc/gu6vkLE1b4NgqOLUuhgp9s8NGdnE1tOaXrqRr3WFZdipixRwRFEBGtFOuYrWPWWNh0ARFRURFR3Uc2f8r47yD4C5YqfMcto41mAAAAAElFTkSuQmCC");
+      }
+
+      #sidebar-content {
+        text-align: center;
+        background: var(--sidebar);
+        color: var(--sidebarcolor);
+        padding: 10px;
+      }
+
+      #sidebar-content header {
+        color: var(--title);
+        font: 1.8em var(--headerfont);
+        margin: 8px;
+      }
+
+      #sidebar-content p a {
+        color: var(--sidebarlink);
+        transition: 0.5s ease;
+      }
+
+      #sidebar-content p a:hover {
+        color: var(--sidebarlinkhover);
+        transition: 0.5s ease;
+      }
+
+      .icon img {
+        border-radius: 100%; /* This makes the icon a circle - feel free to remove or reduce for a rectangle or square */
+        max-width: 150px; /* This can be changed to make the icon smaller; you might have to mess with the border radius too */
+      }
+
+      /* Styling for the menu */
+
+      #main-menu {
+        font: 1.1em var(--headerfont);
+        width: 100%;
+      }
+
+      #main-menu ul {
+        list-style: none;
+      }
+
+      #main-menu li a {
+        padding: 7px;
+        background: var(--menubg);
+        color: var(--menucolor);
+        text-decoration: none;
+        transition: 0.5s ease;
+      }
+
+      #main-menu li a:hover,
+      #main-menu li a:focus {
+        background: var(--menubghover);
+        color: var(--menucolorhover);
+        transition: 0.5s ease;
+      }
+
+      /* Content styling */
+
+      main {
+        margin-top: 10px;
+        color: black;
+        padding: 12px 2px 10px 18px;
+        border-image-slice: 20 11 20 19 fill;
+        border-image-width: 20px 11px 20px 19px;
+        border-image-repeat: repeat round;
+        border-style: solid;
+        border-color: transparent;
+        image-rendering: pixelated;
+        border-image-source: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAABoCAMAAABvw+gRAAAALVBMVEUAAADu7u6qqqqZmZmIiIh3d3e7u7vMzMz////d3d1mZmZVVVX+/v7v7+/w8PCGxkBUAAAAAXRSTlMAQObYZgAAA+lJREFUeNqNWAmC2zAINKeM4u3/n9tYK2yTcdzSY3UwGhAINlkuQiyibzE1MxbTfcbMsq/zAmLmjda30HqVoKAIFzWVqq9TowAo50TRxPQK8PVB6JfN9YT0+KJaOZtqYQAXQMjzArRq01coif1SXJZAtW6RciLy5EqFh/ySyPosiTwQ1nLtmxN0DmIgwCS6mJIbubUHnv/LqASdiHLoQ2j6noGw+yTTj3koM2fiIQsiVjJ+i9Izx8gsN7N4o0c4Wf9l1RSLHTDwbRhU4k3HSuiCorfBe0A8Jw1JvnF1nwD3p3dC+qtvlOOS+/gGaGhxXOGvuCsOlOPGuxmHV8YqVFyGSEZBpM5TbpFC7n59IoTZTnAyJvVAmJSTKgBhmlcF5xXi6oecm43biiyfVvWW88ZhIQ6xq9y6+GG/Wx8t4VAgoBgczq4iKpwFUqAjlPvF3DXHayB8UdaXpc/G0KoSlUlyWHPhNq3iewfynwyCNobTKH+qqUPNKCij+VgYqFSfMWUT8+IrkBHtCIYw05xuP7f1yhyOTNn+lMeViO6g/pCP80XNtTQuviETIQ/PCEOSHA9JXnED0dNMINmgWtCMR3I24ZbocVVo5ERMCDfrTaFElVnIbpVTRKwrL8NEPVQ2uOGs1Natt2h9pmIrRmHnBOHTig0K3PTDupkdWB70J0ktPiOvwj1iGIUtKmnoEvPe5jzc8p0frg8a+shdaxkC526unIdu23Qd8or5mDX104afP9tHRIhmtjdaUQhvl2o3oMsrqBGkGnmdl0PQyE4OrHD81MaAZlpFX5Q2RPF8g8X+vF3wPa16HYRdXz5hebvFtUTQK46sZLG1eF6Js7bzi47GwOyQVal/7R+NTTJ15fJsf2oVzW5QxbnWROiDz4ihXSMryyLcTbuqTYSu9UVVGuKzIgY7eA427Rx89nNpHsqoRReK0aPOnTem1tMNKIiXQYL0xRGqiEVLJa4UKJmJqV9GQEHDj9o/qOps0KUGggnduO2cNN+5ciqTd/7wfINy/UZ4m83Yhd27zJ2E/FTmgciayCNJMuYglAiPufDaEdDkAKULv4K5RfMJWASqCtSShaf2RBR9EDs12fGzAXKQ5jOSFlK/PrgH0tBqHDQyFykQxTsgScO1e5RESlvq5ygG5hsfKBECjQ9Ldpk3KRyghGvB+XsJnI7jk6Ond9ipsOa77xztyaRKHeJLeYQAADfU74IWqUD0eUgbiOkI3Z9dQOQzrfReAx0Jc/gu6vkLE1b4NgqOLUuhgp9s8NGdnE1tOaXrqRr3WFZdipixRwRFEBGtFOuYrWPWWNh0ARFRURFR3Uc2f8r47yD4C5YqfMcto41mAAAAAElFTkSuQmCC");
+      }
+
+      /* Styling for blocks */
+
+      main section,
+      #main-footer {
+        padding: 15px;
+        background: var(--block);
+        margin-bottom: 10px;
+      }
+
+      main h1 {
+        font: 1.8em var(--headerfont);
+        color: var(--h1);
+      }
+
+      main h2 {
+        font: 1.5em var(--headerfont);
+        color: var(--h2);
+      }
+
+      main h3 {
+        font: 1.3em var(--headerfont);
+        color: var(--h3);
+      }
+
+      main h4 {
+        font: 1em var(--headerfont);
+        font-style: italic;
+        color: var(--h4);
+      }
+
+      p {
+        line-height: 1.5;
+        margin: 10px 0 10px 0;
+      }
+
+      main a {
+        color: var(--link);
+        transition: 0.5s ease;
+      }
+
+      main a:hover,
+      main a:focus {
+        color: var(--linkhover);
+        transition: 0.5s ease;
+      }
+
+      main ul {
+        list-style-position: outside;
+        margin-left: 25px;
+      }
+
+      main ul li {
+        line-height: 1.5;
+      }
+
+      main img {
+        max-width: 100%;
+      }
+
+      main input,
+      textarea,
+      select,
+      button {
+        background: var(--block);
+        color: var(--color);
+        font: 1rem var(--bodyfont);
+        border: 1px solid;
+        padding: 8px;
+        margin: 2px;
+      }
+
+      #main-footer {
+        text-align: center;
+      }
+
+      /* The following CSS ONLY applies to mobile/small screens */
+
+      /* Container styling */
+      #container {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-top: 10px;
+      }
+
+      #sidebar-content {
+        width: calc(100% - 20px);
+      }
+
+      #main-menu li {
+        margin-bottom: 15px;
+        display: inline-block;
+      }
+
+      /* Skip to content button */
+
+      #skip a {
+        position: absolute;
+        display: inline-block;
+        left: 0px;
+        top: -1000px;
+        overflow: hidden;
+        transition: top 0.5s ease;
+        background: var(--block);
+        color: var(--link);
+        z-index: 1000;
+        padding: 5px;
+      }
+
+      #skip a:focus {
+        top: 0;
+        transition: top 0.5s ease;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      tr {
+        border-bottom: 1px solid #ddd;
+      }
+
+      td {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: gray;
+      }
+
+      .goodbye {
+        display: none;
+      }
+
+      /* The following CSS ONLY applies to desktop/big screens */
+
+      @media screen and (min-width: 800px) {
+        #container {
+          max-width: 950px;
+          width: 90%;
+          margin: 25px auto;
+          display: flex;
+          gap: 20px;
+        }
+
+        .goodbye {
+          display: block;
+        }
+
+        #sidebar {
+          flex: 1 1 calc(25% - 20px);
+          margin-top: 10px;
+        }
+
+        /* Remove or comment out this block if you don't want a sticky sidebar */
+        #sidebar-content {
+          position: sticky;
+          top: 10px;
+        }
+
+        /* Make menu links into a column */
+
+        #main-menu li {
+          display: block;
+          margin: 0;
+        }
+
+        #main-menu li a {
+          display: block;
+          border-bottom: 1px solid;
+        }
+
+        main {
+          flex: 1 1 calc(75% - 30px);
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+
+        main section {
+          margin: 0;
+        }
+
+        #main-footer {
+          flex: 1 1 calc(100% - 40px);
+        }
+
+        /* Defining grid blocks */
+
+        .full {
+          flex: 1 1 calc(100% - 40px);
+        }
+        .half {
+          flex: 1 1 calc(50% - 40px);
+        }
+        .third {
+          flex: 1 1 calc(33% - 40px);
+        }
+        .twothird {
+          flex: 1 1 calc(66% - 40px);
+        }
+        .quarter {
+          flex: 1 1 calc(25% - 40px);
+        }
+        .threequarter {
+          flex: 1 1 calc(75% - 40px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Please don't remove the next 2 lines! -->
+    <div id="top"></div>
+    <div id="skip"><a href="#content">Skip to content</a></div>
+
+    <div id="container">
+      <div id="sidebar">
+        <div id="sidebar-content">
+          <!-- An image can go here if you'd like, or just delete this line if you don't. It doesn't matter what size it is as long as it's square. -->
+          <div class="icon">
+            <a href="https://slithercat.carrd.co/" target="_blank"
+              ><img src="assets/img/ocs/a_icon.png" alt=""
+            /></a>
+          </div>
+          <header>Aislin Diamant</header>
+
+          <!-- Navigation menu  -->
+          <nav id="main-menu">
+            <ul>
+              <li><i>Any Pronouns</i></li>
+            </ul>
+          </nav>
+          <br />
+          <table>
+            <tr>
+              <td><b>Age</b></td>
+              <td>23</td>
+            </tr>
+            <tr>
+              <td><b>Species</b></td>
+              <td>Shapeshifter</td>
+            </tr>
+            <tr>
+              <td><b>Gender</b></td>
+              <td>Enby</td>
+            </tr>
+            <tr>
+              <td><b>Sexuality</b></td>
+              <td>Sapphic</td>
+            </tr>
+            <tr>
+              <td><b>Height</b></td>
+              <td>5'8</td>
+            </tr>
+            <tr>
+              <td><b>Sexuality</b></td>
+              <td>Sapphic</td>
+            </tr>
+            <tr>
+              <td><b>D.O.B</b></td>
+              <td>09/19/2031</td>
+            </tr>
+          </table>
+          <br />
+          <div id="floater" class="goodbye">
+            <a href="https://galazzyx-commish.carrd.co/" target="_blank"
+              ><img
+                src="assets/img/ocs/a_pagedoll.png"
+                style="width: 150px; padding: 5px"
+            /></a>
+            <a
+              href="https://toyhou.se/38365647.blinkie-comms-closed"
+              target="_blank"
+              ><img src="assets/img/ocs/a_blinkie.gif"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content area -->
+      <main id="content">
+        <div class="tab">
+          <button
+            class="tablinks"
+            onclick="openCity(event, 'London')"
+            id="defaultOpen"
+          >
+            About
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Paris')">
+            Gallery
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Story')">
+            Story
+          </button>
+        </div>
+
+        <div id="London" class="tabcontent">
+          <main id="content">
+            <!-- Section tags must be used for blocks -->
+            <section class="full">
+              Aislin Diamant is a gentleman thief and a shapeshifter who uses
+              their abilities to steal valuables from museums and the rich to
+              help their loved ones. They also occasionally stay with Ember as a
+              cat named Trick. They are a outgoing and charming person, usually
+              using their charm to get their way into and out of situations.
+              <br /><br />
+              They are very imaginative and talkative as well, though they can
+              also get very quiet at times if they’re in their head. Because of
+              their species, they would be outshunned by society if they were
+              found out. So they’re very hesitant to let people into their lives
+              and depend on others.
+            </section>
+
+            <section class="full">
+              <h2>Appearence</h2>
+              <p>
+                They have a skinny frame with broad shoulders and a more
+                masculine face shape. They have wavy, long ginger hair and
+                darker purple eyes. They have two moles under each eye that are
+                replicated in their thief uniform as well. Their body has small
+                scars mostly around the stomach and upper leg area. Can only
+                snapeshift into domesticated animals.
+              </p>
+            </section>
+
+            <section class="full">
+              <h2>Trivia</h2>
+              <ul>
+                <li style="margin-top: 10px">
+                  Loves collecting things and being crafty with them. They find
+                  buttons, clothing scraps, or even pencils and will turn it
+                  into something else. They love drawing still life even if
+                  their skills aren't that great. Also is very fond of sewing.
+                </li>
+                <li style="margin-top: 10px">
+                  Somehow they've mastered the art of over and underthinking.
+                  They're very skeptical of anyone they meet and will keep them
+                  at a arms length just in case they're dangerous— and then
+                  they'll charge into a dangerous situation because they're sure
+                  it'll 'be fine'.
+                </li>
+                <li style="margin-top: 10px">
+                  Really friendly with children. They grew up around a bunch of
+                  little kids so they're very fond of them. They also know sign
+                  language because of this!
+                </li>
+                <li style="margin-top: 10px">
+                  Doesn't ever really stop moving. They're always working
+                  towards something even at the cost of their own physical and
+                  mental health.
+                </li>
+                <li style="margin-top: 10px">
+                  They don't get flustered often, but if they do they blush a
+                  lot. Full tomato
+                </li>
+              </ul>
+            </section>
+
+            <section class="half">
+              <h2><span style="color: rgb(76, 204, 64)">Likes</span></h2>
+              <ul>
+                <li>Jewels and gems, or anything shiny</li>
+                <li>Transforming into a cat</li>
+                <li>Almost all puddings</li>
+              </ul>
+            </section>
+
+            <section class="half">
+              <h2><span style="color: rgb(204, 64, 64)">Dislikes</span></h2>
+              <ul>
+                <li>Energy drinks and cucumbers</li>
+                <li>Being forced to shapeshift</li>
+                <li>Having to Resort to violence</li>
+              </ul>
+            </section>
+
+            <section class="third">
+              <img src="https://files.catbox.moe/4vuchr.png" width="150px" />
+            </section>
+
+            <section class="twothird">
+              <h2>Ember Kruetz</h2>
+              <h4>
+                <i style="color: gray">acquaintances/rivals/love interest</i>
+              </h4>
+              <br />
+              <details>
+                <summary>learn more!</summary>
+                <br />
+                Aislin admires Ember's hospitality and kindness. Their
+                relationship is extremely complicated, with Ember being kind and
+                affectionate towards them when they’re transformed into a cat
+                and as their rival when they are untransformed. Despite that,
+                they still do care for Ember and find their quarrels fun and
+                exciting— they also are a little interested in her romantically.
+                <br /><br />
+                <i
+                  >THE banter-ers of all time. Aislin loves playing with her and
+                  Ember is quick to quip back. They're technically enemies, but
+                  don't harbor any negative feelings towards each other.</i
+                >
+              </details>
+              <br />
+              <span style="color: darkgray; font-size: 12px"
+                ><i
+                  >"Ah, my favorite detective! I wonder how long it’ll be until
+                  she realizes?"</i
+                ></span
+              >
+            </section>
+
+            <section class="third">
+              <img src="https://files.catbox.moe/4zcrja.png" width="150px" />
+            </section>
+
+            <section class="twothird">
+              <h2>Estrella Snow</h2>
+              <h4>
+                <i style="color: gray">family</i>
+              </h4>
+              <br />
+              <details>
+                <summary>learn more!</summary>
+                <br />
+                Aislin sees Estrella as an older sister and looks up to her
+                deeply. They are aware of her now famous status and sometimes
+                goes to visit her before shows. Although, Estrella doesn’t seem
+                to remember Aislin but participates in their conversations
+                anyway. Aislin doubts they actually have forgotten, but doesn't
+                question it and appreciates the time they spend together
+                regardless.
+              </details>
+              <br />
+              <span style="color: darkgray; font-size: 12px"
+                ><i
+                  >"I miss her, sometimes. She’s still here, but so
+                  distant..."</i
+                ></span
+              >
+            </section>
+
+            <section class="full">
+              <h2>Quirk Box</h2>
+              <h4>
+                <i style="color: gray"
+                  >Small facts that aren't long enough for a specific
+                  section.</i
+                >
+              </h4>
+              <ul>
+                <li style="margin-top: 10px">
+                  Has colorblindness (deuteranopia, red green weakness)
+                </li>
+                <li style="margin-top: 10px">
+                  Suffers with pretty bad chronic insomnia and doesn't have
+                  access to any sleeping pills
+                </li>
+                <li style="margin-top: 10px">
+                  They use their hands a lot while talking
+                </li>
+                <li style="margin-top: 10px">Has a very high pain tolerance</li>
+                <li style="margin-top: 10px">Chews on many a pen and pencil</li>
+              </ul>
+            </section>
+
+            <footer id="main-footer">
+              <p>
+                <a href="#top">back to top</a>
+                <span aria-hidden="true">&bull;</span>
+                <a href="./index.html">go back home</a>
+              </p>
+            </footer>
+          </main>
+        </div>
+
+        <div id="Paris" class="tabcontent">
+          <main id="content">
+            <!-- Section tags must be used for blocks -->
+            <section class="full">
+              <h1>Images</h1>
+              <p>
+                All of the images shown in the gallery are mine— if theres an
+                image on this page that isn't mine, there should be a link to
+                the artist! Feel free to click on images to see them in higher
+                quality. If you claim anything here as yours I <i>will</i> find
+                a way to get it taken down. 👁️
+              </p>
+            </section>
+
+            <section class="full">
+              <h2>Normal</h2>
+              <div>
+                <a data-fslightbox href="assets/img/art/oc13.png">
+                  <img src="assets/img/art/oc13.png" width="30%" />
+                </a>
+                <a data-fslightbox href="assets/img/art/oc14.png">
+                  <img src="assets/img/art/oc14.png" width="30%" />
+                </a>
+                <a data-fslightbox href="assets/img/art/oc18.png">
+                  <img src="assets/img/art/oc18.png" width="30%" />
+                </a>
+              </div>
+            </section>
+
+            <section class="full">
+              <h2>Web AU</h2>
+              <p>
+                Yes, both are Aislin! Although this version doesn't have any
+                lore. Go my wii/frutiger aero(ish) creature
+              </p>
+              <div>
+                <a data-fslightbox href="assets/img/art/oc17.png">
+                  <img src="assets/img/art/oc17.png" width="30%" />
+                </a>
+                <a data-fslightbox href="assets/img/art/oc6.png">
+                  <img src="assets/img/art/oc6.png" width="30%" />
+                </a>
+                <a data-fslightbox href="assets/img/art/oc9.png">
+                  <img src="assets/img/art/oc9.png" width="30%" />
+                </a>
+              </div>
+            </section>
+
+            <footer id="main-footer">
+              <p>
+                <a href="#top">back to top</a>
+                <span aria-hidden="true">&bull;</span>
+                <a href="./index.html">go back home</a>
+              </p>
+            </footer>
+          </main>
+        </div>
+
+        <div id="Story" class="tabcontent">
+          <main id="content">
+            <!-- Section tags must be used for blocks -->
+            <section class="full">
+              <div class="alert">
+                <span
+                  class="closebtn"
+                  onclick="this.parentElement.style.display = 'none'"
+                  >&times;</span
+                >
+                <span style="color: rgb(204, 64, 64)"
+                  ><i
+                    ><b>Warning!</b> Mentions of experimentation. Also very
+                    clunky writing</i
+                  ></span
+                >
+              </div>
+              <br />
+
+              <h1>Early Life</h1>
+              <p>
+                Aislin was born from the infamous shapeshifter experiment that
+                happened from 2025 to 2030. Their mother was selected and
+                injected with a gene commonly found in domesticated animals. A
+                year later most of the world had flooded, and their mother fled
+                with other mothers and children of the experiment to a small
+                island not too far from the city.
+              </p>
+              <p>
+                The parents tried their best to provide food for everyone, but
+                after a few years, they had to start going to the city for
+                resources. This left the mothers absent from the older kids, as
+                they tried to take care of the youngest.
+              </p>
+              <p>
+                One of the older kids, Estrella, tended to hang around Aislin a
+                lot. They would play pretend and make plans to save their island
+                together. When they were teenagers, Estrella was taken away from
+                the island without a word. This left Aislin sad and confused,
+                but also determined to find out what happened to her from her
+                mouth.
+              </p>
+              <p>
+                When Aislin got older, they realized how much the mothers were
+                struggling to take care of some of the younger kids. Wanting to
+                do something to help and take stress off of the mothers and
+                kids, they started shapeshifting and stealing things from the
+                city with a gentleman thief persona, inspired by much of the
+                pretend they did with Estrella. They enjoyed playing and toying
+                with the police, and the recognition and praise they got on the
+                island.
+              </p>
+            </section>
+
+            <section class="full">
+              <h1>Present Day</h1>
+              <p>
+                After a few months of building their thief identity, a new cop
+                was assigned to the area they usually steal from. Aislin felt
+                they were different than usual cops— engaging with their banter
+                and seeing threw a lot of their plays. They started to seek out
+                interactions with this specific cop, to see how they would
+                respond.
+              </p>
+              <p>
+                After an especially hard chase, it was getting too dark to go
+                back to their island. They decided to shift into a cat to take a
+                nap in a secure area until they could get back. By the time they
+                woke up, someone had found them and brought them in their house.
+                Concinidently, it ended up being the new cop, Ember.
+              </p>
+              <p>
+                Ember continued to allow Aislin (Who she has nicknamed 'Trick')
+                to sleep and occasionally eat at her house. Despite her
+                hospitality, Aislin tries not to overstay their welcome as they
+                still feel a little guilty about the situation.
+              </p>
+            </section>
+
+            <footer id="main-footer">
+              <p>
+                <a href="#top">back to top</a>
+                <span aria-hidden="true">&bull;</span>
+                <a href="./index.html">go back home</a>
+              </p>
+            </footer>
+          </main>
+        </div>
+
+        <script>
+          function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(
+                " active",
+                "",
+              );
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+          }
+
+          // Get the element with id="defaultOpen" and click on it
+          document.getElementById("defaultOpen").click();
+        </script>
+      </main>
+    </div>
+    <div class="footer">
+      <center>
+        <footer>
+          made by beta | 2025-forever |
+          <a href="https://github.com/betapop/betapopsicle" target="_blank"
+            >github</a
+          >
+          | layout by
+          <a href="https://kalechips.net/projects/layouts/" target="_blank"
+            >kalechips</a
+          >
+        </footer>
+      </center>
+    </div>
+    <br />
+  </body>
+  <script src="./js/fslightbox.js"></script>
+</html>

@@ -1,0 +1,290 @@
+.notepaper {
+    color: black;
+    padding: 12px 2px 10px 18px;
+    border-image-slice: 20 11 20 19 fill;
+    border-image-width: 20px 11px 20px 19px;
+    border-image-repeat: repeat round;
+    border-style: solid;
+    border-color: transparent;
+    image-rendering: pixelated;
+    border-image-source: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAABoCAMAAABvw+gRAAAALVBMVEUAAADu7u6qqqqZmZmIiIh3d3e7u7vMzMz////d3d1mZmZVVVX+/v7v7+/w8PCGxkBUAAAAAXRSTlMAQObYZgAAA+lJREFUeNqNWAmC2zAINKeM4u3/n9tYK2yTcdzSY3UwGhAINlkuQiyibzE1MxbTfcbMsq/zAmLmjda30HqVoKAIFzWVqq9TowAo50TRxPQK8PVB6JfN9YT0+KJaOZtqYQAXQMjzArRq01coif1SXJZAtW6RciLy5EqFh/ySyPosiTwQ1nLtmxN0DmIgwCS6mJIbubUHnv/LqASdiHLoQ2j6noGw+yTTj3koM2fiIQsiVjJ+i9Izx8gsN7N4o0c4Wf9l1RSLHTDwbRhU4k3HSuiCorfBe0A8Jw1JvnF1nwD3p3dC+qtvlOOS+/gGaGhxXOGvuCsOlOPGuxmHV8YqVFyGSEZBpM5TbpFC7n59IoTZTnAyJvVAmJSTKgBhmlcF5xXi6oecm43biiyfVvWW88ZhIQ6xq9y6+GG/Wx8t4VAgoBgczq4iKpwFUqAjlPvF3DXHayB8UdaXpc/G0KoSlUlyWHPhNq3iewfynwyCNobTKH+qqUPNKCij+VgYqFSfMWUT8+IrkBHtCIYw05xuP7f1yhyOTNn+lMeViO6g/pCP80XNtTQuviETIQ/PCEOSHA9JXnED0dNMINmgWtCMR3I24ZbocVVo5ERMCDfrTaFElVnIbpVTRKwrL8NEPVQ2uOGs1Natt2h9pmIrRmHnBOHTig0K3PTDupkdWB70J0ktPiOvwj1iGIUtKmnoEvPe5jzc8p0frg8a+shdaxkC526unIdu23Qd8or5mDX104afP9tHRIhmtjdaUQhvl2o3oMsrqBGkGnmdl0PQyE4OrHD81MaAZlpFX5Q2RPF8g8X+vF3wPa16HYRdXz5hebvFtUTQK46sZLG1eF6Js7bzi47GwOyQVal/7R+NTTJ15fJsf2oVzW5QxbnWROiDz4ihXSMryyLcTbuqTYSu9UVVGuKzIgY7eA427Rx89nNpHsqoRReK0aPOnTem1tMNKIiXQYL0xRGqiEVLJa4UKJmJqV9GQEHDj9o/qOps0KUGggnduO2cNN+5ciqTd/7wfINy/UZ4m83Yhd27zJ2E/FTmgciayCNJMuYglAiPufDaEdDkAKULv4K5RfMJWASqCtSShaf2RBR9EDs12fGzAXKQ5jOSFlK/PrgH0tBqHDQyFykQxTsgScO1e5RESlvq5ygG5hsfKBECjQ9Ldpk3KRyghGvB+XsJnI7jk6Ond9ipsOa77xztyaRKHeJLeYQAADfU74IWqUD0eUgbiOkI3Z9dQOQzrfReAx0Jc/gu6vkLE1b4NgqOLUuhgp9s8NGdnE1tOaXrqRr3WFZdipixRwRFEBGtFOuYrWPWWNh0ARFRURFR3Uc2f8r47yD4C5YqfMcto41mAAAAAElFTkSuQmCC");
+}
+
+/* The following CSS applies on all screen sizes */
+
+/* Colors and fonts */
+:root {
+    /* Fonts */
+    --bodyfont: sans-serif;
+    --headerfont: Georgia, serif;
+
+    /* Main colors */
+    --background:#5a094a; /* Page background */
+    --color:#2f152f;
+    --block:#f9f8f9; /* Background color for the grid blocks in the content */
+
+    --link:#5a094a;
+    --linkhover:#a649a9;
+
+    --h1:#2f152f;
+    --h2:#2f152f;
+    --h3:#2f152f;
+    --h4:#2f152f;
+
+    /* Sidebar colors */
+    --sidebar:#f9f8f9;
+    --sidebarcolor:#2f152f;
+    --title: #5a094a;
+    --sidebarlink: #5a094a;
+    --sidebarlinkhover:#a649a9;
+
+    /* Menu colors */
+    --menubg:#2c1a30;
+    --menucolor:#e0aee2;
+    --menubghover:#e0aee2;
+    --menucolorhover:#2c1a30;
+}
+
+* { margin:0; padding:0; }
+
+/* Main body styling */
+body {
+    background-color:var(--background);
+    background-attachment:fixed;
+    font:1rem sans-serif;
+    color:var(--color);
+}
+
+/* Rounded corners - feel free to get rid of this or change it */
+
+main section, #sidebar-content, #main-footer {
+    border-radius:5px;
+}
+
+/* Sidebar styling */
+
+#sidebar-content {
+    text-align:center;
+    background: var(--sidebar);
+    color: var(--sidebarcolor);
+    padding:10px;
+}
+
+#sidebar-content header {
+    color:var(--title);
+    font:1.8em var(--headerfont);
+    margin:8px;
+}
+
+#sidebar-content p a {
+    color:var(--sidebarlink);
+    transition:0.5s ease;
+}
+
+#sidebar-content p a:hover {
+    color:var(--sidebarlinkhover);
+    transition:0.5s ease;
+}
+
+.icon img {
+    border-radius:100%; /* This makes the icon a circle - feel free to remove or reduce for a rectangle or square */
+    max-width:150px; /* This can be changed to make the icon smaller; you might have to mess with the border radius too */
+}
+
+/* Styling for the menu */
+
+#main-menu {
+    font:1.1em var(--headerfont);
+    width:100%;
+}
+
+#main-menu ul {
+    list-style:none;
+}
+
+#main-menu li a {
+    padding:7px;
+    background:var(--menubg);
+    color:var(--menucolor);
+    text-decoration:none;
+    transition:0.5s ease;
+}
+
+#main-menu li a:hover, #main-menu li a:focus {
+    background: var(--menubghover);
+    color:var(--menucolorhover);
+    transition:0.5s ease;
+}
+
+/* Content styling */
+
+main {
+    margin-top:10px;
+}
+
+/* Styling for blocks */
+
+main section, #main-footer {
+    padding:15px;
+    background:var(--block);
+    margin-bottom:10px;
+}
+
+main h1 {
+    font:1.8em var(--headerfont);
+    color:var(--h1);
+}
+
+main h2 {
+    font:1.5em var(--headerfont);
+    color:var(--h2);
+}
+
+main h3 {
+    font:1.3em var(--headerfont);
+    color:var(--h3);
+}
+
+main h4 {
+    font:1em var(--headerfont);
+    font-style:italic;
+    color:var(--h4);
+}
+
+p {
+    line-height:1.5;
+    margin:10px 0 10px 0;
+}
+
+main a {
+    color:var(--link);
+    transition:0.5s ease;
+}
+
+main a:hover, main a:focus {
+    color:var(--linkhover);
+    transition:0.5s ease;
+}
+
+main ul {
+    list-style-position: outside;
+    margin-left: 25px;
+}
+
+main ul li {
+    line-height:1.5;
+}
+
+main img {
+    max-width:100%;
+}
+
+main input, textarea, select, button { 
+    background: var(--block);  
+    color: var(--color);
+    font: 1rem var(--bodyfont); 
+    border: 1px solid; 
+    padding: 8px; 
+    margin: 2px;
+}
+
+#main-footer {
+    text-align:center;
+}
+
+/* The following CSS ONLY applies to mobile/small screens */
+
+/* Container styling */
+#container {
+    width: calc(100% - 20px);
+    padding:10px;
+    margin-top:10px;
+}
+
+#sidebar-content {
+    width: calc(100% - 20px);
+}
+
+#main-menu li {
+    margin-bottom:15px;
+    display:inline-block;
+}
+
+/* Skip to content button */
+
+#skip a {
+    position:absolute;
+    display:inline-block;
+    left:0px;
+    top:-1000px;
+    overflow:hidden;
+    transition:top 0.5s ease;
+    background:var(--block);
+    color:var(--link);
+    z-index:1000;
+    padding:5px;
+}
+ 
+#skip a:focus {
+    top: 0;
+    transition:top 0.5s ease;
+}
+
+/* The following CSS ONLY applies to desktop/big screens */
+
+@media screen and (min-width: 800px) {
+    #container {
+        max-width:950px;
+        width:90%;
+        margin:25px auto;
+        display:flex;
+        gap:20px;
+    }
+
+    #sidebar {
+        flex: 1 1 calc(25% - 20px);
+        margin-top:10px;
+    }
+    
+    /* Remove or comment out this block if you don't want a sticky sidebar */
+    #sidebar-content {
+        position:sticky;
+        top:10px;
+    }
+
+    /* Make menu links into a column */
+
+    #main-menu li {
+        display:block;
+        margin:0;
+    }
+
+    #main-menu li a {
+        display:block;
+        border-bottom:1px solid;
+    }
+
+    main {
+        flex: 1 1 calc(75% - 30px);
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+    main section {
+        margin:0;
+    }
+    
+    #main-footer {
+        flex: 1 1 calc(100% - 40px);
+    }
+
+    /* Defining grid blocks */
+
+    .full { flex: 1 1 calc(100% - 40px);}
+    .half { flex: 1 1 calc(50% - 40px); }
+    .third { flex: 1 1 calc(33% - 40px); }
+    .twothird { flex: 1 1 calc(66% - 40px); }
+    .quarter { flex: 1 1 calc(25% - 40px); }
+    .threequarter { flex: 1 1 calc(75% - 40px); }
+}
