@@ -144,6 +144,13 @@ p {
   padding: 10px;
 }
 
+.frame4 {
+  border: 30px solid white;
+  border-image: url("/public/assets/img/indexi/frame4full.png") 30 round;
+  padding: 0px;
+  margin: 5px;
+}
+
 /* Screen larger than 600px? 2 column */
 @media (max-width: 800px) {
   .container {
