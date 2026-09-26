@@ -3,7 +3,7 @@
 
   <head>
     <title>about me</title>
-    <script src="assets/js/main.js?nocache=1785705751557"></script>
+    <script src="assets/js/main.js?nocache=1786462257728"></script>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://thegreenroom.neocities.org/webrings/tvtimewebring/onionring.css" />
     <script src="https://u.widget.st/ar.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/main.css?nocache=1785705751557" />
+    <link rel="stylesheet" href="assets/main.css?nocache=1786462257728" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
     <link href="..//assets/img/temp/favi.png" rel="icon" type="image/x-icon" />
@@ -33,6 +33,52 @@
         </div>
         <div class="main">
           
+<style>
+  .aboutme {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 0px 10px;
+    grid-auto-flow: row;
+    grid-template-areas: "icon about";
+  }
+
+  .icon {
+    grid-area: icon;
+    text-align: center;
+  }
+
+  .about {
+    grid-area: about;
+  }
+
+  @media (min-width: 800px) and (max-width: 1080px) {
+    .aboutme {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr;
+      gap: 0px 15px;
+      grid-auto-flow: row;
+      grid-template-areas: "icon about";
+    }
+  }
+
+  @media (max-width: 799px) {
+    .aboutme {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      gap: 0px 15px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "icon"
+        "about";
+    }
+    .icon {
+      display: none;
+    }
+  }
+</style>
 <div
   style="
     border: 5px solid;
@@ -44,8 +90,57 @@
   <div class="winheader"><i class="fa-solid fa-star"></i>meet beta!</div>
   <div style="width: 2fr; background-color: var(--color-secondary)">
     <div style="overflow: hidden; padding: 1%">
-      ok so i did a bunch of quizzes and stuff and idk where to put them so
-      they're going here for now
+      <div class="aboutme">
+        <div class="icon">
+          <img
+            src="assets/img/sitest/trucy.webp"
+            id="truce"
+            class="hvr-float-shadow"
+            width="200px"
+          />
+          <script>
+            tippy("#truce", {
+              content: "i LOVE trucy wright!!",
+              followCursor: true,
+              theme: "light",
+            });
+          </script>
+        </div>
+        <div class="about">
+          <div class="tab winheader">
+            <button
+              class="tablinks"
+              onclick="openCity(event, 'London')"
+              id="defaultOpen"
+            >
+              London
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">
+              Paris
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+              Tokyo
+            </button>
+          </div>
+
+          <div id="London" class="tabcontent">
+            <h3>London</h3>
+            <p>London is the capital city of England.</p>
+          </div>
+
+          <div id="Paris" class="tabcontent">
+            <h3>Paris</h3>
+            <p>Paris is the capital of France.</p>
+          </div>
+
+          <div id="Tokyo" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- about me weewoo -->
       <a
         href="https://www.theotaku.com/quizzes/view/2702/what_ace_attorney_character_are_you%3F"
         ><img
@@ -227,6 +322,25 @@
     </div>
   </div>
 </div>
+
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
 
           <br>
         </div>

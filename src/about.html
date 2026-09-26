@@ -5,6 +5,52 @@ bodyClass: about-page
 nesting: "../"
 ---
 
+<style>
+  .aboutme {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 0px 10px;
+    grid-auto-flow: row;
+    grid-template-areas: "icon about";
+  }
+
+  .icon {
+    grid-area: icon;
+    text-align: center;
+  }
+
+  .about {
+    grid-area: about;
+  }
+
+  @media (min-width: 800px) and (max-width: 1080px) {
+    .aboutme {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr;
+      gap: 0px 15px;
+      grid-auto-flow: row;
+      grid-template-areas: "icon about";
+    }
+  }
+
+  @media (max-width: 799px) {
+    .aboutme {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      gap: 0px 15px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "icon"
+        "about";
+    }
+    .icon {
+      display: none;
+    }
+  }
+</style>
 <div
   style="
     border: 5px solid;
@@ -16,8 +62,57 @@ nesting: "../"
   <div class="winheader"><i class="fa-solid fa-star"></i>meet beta!</div>
   <div style="width: 2fr; background-color: var(--color-secondary)">
     <div style="overflow: hidden; padding: 1%">
-      ok so i did a bunch of quizzes and stuff and idk where to put them so
-      they're going here for now
+      <div class="aboutme">
+        <div class="icon">
+          <img
+            src="assets/img/sitest/trucy.webp"
+            id="truce"
+            class="hvr-float-shadow"
+            width="200px"
+          />
+          <script>
+            tippy("#truce", {
+              content: "i LOVE trucy wright!!",
+              followCursor: true,
+              theme: "light",
+            });
+          </script>
+        </div>
+        <div class="about">
+          <div class="tab winheader">
+            <button
+              class="tablinks"
+              onclick="openCity(event, 'London')"
+              id="defaultOpen"
+            >
+              London
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">
+              Paris
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+              Tokyo
+            </button>
+          </div>
+
+          <div id="London" class="tabcontent">
+            <h3>London</h3>
+            <p>London is the capital city of England.</p>
+          </div>
+
+          <div id="Paris" class="tabcontent">
+            <h3>Paris</h3>
+            <p>Paris is the capital of France.</p>
+          </div>
+
+          <div id="Tokyo" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- about me weewoo -->
       <a
         href="https://www.theotaku.com/quizzes/view/2702/what_ace_attorney_character_are_you%3F"
         ><img
@@ -199,3 +294,22 @@ nesting: "../"
     </div>
   </div>
 </div>
+
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
